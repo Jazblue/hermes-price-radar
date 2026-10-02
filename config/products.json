@@ -1,0 +1,33 @@
+{
+  "categories": [
+    {
+      "name": "laptops",
+      "search_terms": "laptop",
+      "currency": "GBP",
+      "max_price": 500,
+      "retailers": [
+        "currys.co.uk",
+        "argos.co.uk",
+        "amazon.co.uk",
+        "very.co.uk"
+      ],
+      "keywords": [
+        "laptop",
+        "notebook"
+      ],
+      "exclude_keywords": [
+        "refurbished",
+        "used",
+        "second hand",
+        "parts",
+        "accessory"
+      ]
+    }
+  ],
+  "global_settings": {
+    "price_check_timeout": 30,
+    "max_results_per_search": 10,
+    "min_price_change_for_alert": 5.0,
+    "min_percent_change_for_alert": 10.0
+  }
+}
