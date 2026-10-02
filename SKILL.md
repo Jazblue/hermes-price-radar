@@ -50,6 +50,33 @@ Three worksheets:
 2. **Price History** - All historical observations
 3. **Radar** - Human-readable summary
 
+
+
+## Browser Verification Limitations
+
+The automated browser verification layer using Playwright has been implemented and tested on 4 product/retailer combinations:
+
+1. ASUS M1607KA-MB148W @ Argos
+2. ASUS M1607KA-MB148W @ Currys
+3. ASUS M1605YA-MB601W @ Argos
+4. ASUS M1605YA-MB601W @ Amazon UK
+
+**Test Result:** All 4 combinations encountered anti-bot protections preventing page access.
+
+| Retailer | Status | Reason |
+|----------|--------|--------|
+| Argos | UNVERIFIED | HTTP 403 - Bot protection |
+| Currys | UNVERIFIED | HTTP 403 - Bot protection |
+| Amazon UK | UNVERIFIED | Timeout - anti-bot protection |
+
+**Conclusion:** Standard Playwright access is blocked by major UK retailers' anti-bot protections. The validation system correctly refused to fabricate verification results.
+
+**Deliberate Design Decision:** No stealth browsers, CAPTCHA bypasses, proxy rotation, or fingerprint spoofing have been implemented. The validation system correctly refuses to fabricate verification when automated access is blocked.
+
+**Future Path:** The next phase will redesign the evidence model to allow the radar to use legitimate research evidence (manual verification, API access, structured data, etc.) without requiring direct automated browser access to every retailer.
+
+The browser verification code is available in `research/browser_verification.py` for reference but is not used in the automated pipeline until reliable access methods are established.
+
 ## Price Validation Rules
 
 
