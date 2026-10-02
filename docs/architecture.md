@@ -104,54 +104,111 @@ Price Radar Skill (hermes skill)
 }
 ```
 
-### Current Products (`data/products.json`)
+### Canonical Product (`data/products.json`) — keyed by manufacturer part number
 ```json
 {
-  "product-id-1": {
-    "product_id": "product-id-1",
-    "product": "Lenovo IdeaPad 5 15ABR8",
-    "manufacturer": "Lenovo",
-    "model": "82SV000BUK",
-    "category": "laptops",
-    "retailer": "Currys",
-    "current_price": 499.99,
-    "currency": "GBP",
-    "lowest_recorded": 479.99,
-    "highest_recorded": 529.99,
-    "previous_price": 519.99,
-    "price_change": -20.00,
-    "url": "https://www.currys.co.uk/...",
-    "availability": "In stock",
-    "last_checked": "2026-10-05T09:00:00Z"
+  "90NB15F1-M00A60": {
+    "product_id": "asus-vivobook-16-m1607ka-mb148w",
+    "brand": "ASUS",
+    "model": "Vivobook 16 (M1607) Copilot+ PC",
+    "manufacturer_part_number": "90NB15F1-M00A60",
+    "model_number": "M1607KA-MB148W",
+    "marketing_title": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+    "key_specs": { "cpu": "AMD Ryzen AI 5 330", "ram": "16GB DDR5", "storage": "512GB NVMe M.2 SSD" },
+    "spec_conflicts": [
+      { "field": "cpu", "resolved": false,
+        "values": [
+          { "value": "AMD Ryzen AI 5 330, 4 Core", "source": "uk.store.asus.com", "source_trust": "manufacturer_uk_store" },
+          { "value": "AMD Ryzen AI 5 330, hex core", "source": "argos.co.uk snippet", "source_trust": "retailer_snippet_unverified" }
+        ] }
+    ],
+    "retailers": {
+      "asus-uk-store": {
+        "retailer": "ASUS UK Store",
+        "retailer_product_id": "90NB15F1-M00A60",
+        "product_url": "https://uk.store.asus.com/...",
+        "price": 549.99,
+        "currency": "GBP",
+        "price_type": "standard",
+        "availability": "in_stock",
+        "last_verified": "2026-10-03T00:00:00Z",
+        "verification_status": "VERIFIED",
+        "verification_method": "direct_page_fetch",
+        "verification_source": "https://uk.store.asus.com/...",
+        "evidence": "Body read at source: 'Special Price GBP 549.99'",
+        "block_reason": null,
+        "checked_at": "2026-10-03T00:00:00Z"
+      },
+      "argos": {
+        "retailer": "Argos",
+        "retailer_product_id": "7741159",
+        "product_url": "https://www.argos.co.uk/product/7741159",
+        "price": null,
+        "availability": "unknown",
+        "verification_status": "BLOCKED",
+        "verification_method": "blocked",
+        "block_reason": "HTTP 403 at Akamai edge (errors.edgesuite.net)",
+        "last_known_price_unverified": 549.0,
+        "last_known_price_at": "2026-10-02T14:58:36Z"
+      }
+    },
+    "lowest_verified": {
+      "price": 549.99,
+      "currency": "GBP",
+      "retailer_slug": "asus-uk-store",
+      "product_url": "https://uk.store.asus.com/...",
+      "retailers_checked": 4,
+      "retailers_verified": 2,
+      "retailers_verified_and_purchasable": 1,
+      "computed_at": "2026-10-03T00:00:00Z"
+    }
   }
 }
 ```
 
-### Price History (`data/price-history.json`)
+### Price History (`data/price-history.json`) — object, not array
 ```json
-[
-  {
-    "timestamp": "2026-10-03T09:00:00Z",
-    "product_id": "product-id-1",
-    "product": "Lenovo IdeaPad 5 15ABR8",
-    "retailer": "Currys",
-    "price": 519.99,
-    "currency": "GBP",
-    "url": "https://www.currys.co.uk/...",
-    "availability": "In stock"
-  },
-  {
-    "timestamp": "2026-10-04T09:00:00Z",
-    "product_id": "product-id-1",
-    "product": "Lenovo IdeaPad 5 15ABR8",
-    "retailer": "Currys",
-    "price": 499.99,
-    "currency": "GBP",
-    "url": "https://www.currys.co.uk/...",
-    "availability": "In stock"
-  }
-]
+{
+  "_schema_version": "2.0",
+  "observations": [
+    {
+      "observation_id": "obs_...",
+      "observed_at": "2026-10-03T00:00:00Z",
+      "manufacturer_part_number": "90NB15F1-M00A60",
+      "product_id": "asus-vivobook-16-m1607ka-mb148w",
+      "retailer": "ASUS UK Store",
+      "retailer_slug": "asus-uk-store",
+      "price": 549.99,
+      "currency": "GBP",
+      "price_type": "standard",
+      "availability": "in_stock",
+      "verification_status": "VERIFIED",
+      "verification_method": "direct_page_fetch",
+      "verification_source": "https://uk.store.asus.com/...",
+      "product_url": "https://uk.store.asus.com/...",
+      "counts_toward_lowest_verified": true
+    },
+    {
+      "observed_at": "2026-10-03T00:00:00Z",
+      "retailer": "Argos",
+      "price": null,
+      "verification_status": "BLOCKED",
+      "verification_method": "blocked",
+      "block_reason": "HTTP 403 at Akamai edge",
+      "counts_toward_lowest_verified": false
+    }
+  ],
+  "migrated_legacy_records": { "records": [] },
+  "diagnostics": []
+}
 ```
+
+Rejected near-matches are **not** stored here. They live in `research/rejected_matches.md`
+as discovery evidence.
+
+**Frontend contract:** `app.js` reads `payload.observations || payload` and
+`payload.products || payload`, so it renders both the v2 object shape and the legacy array
+shape. Deploy the frontend and the data together, or the frontend first.
 
 
 ## Research & Validation Process

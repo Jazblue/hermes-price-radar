@@ -1,33 +1,105 @@
 {
+  "_schema_version": "2.0",
+  "_file_role": "DISCOVERY CONFIG ONLY. Declares what to search for and where. Canonical tracking state lives in data/products.json; historical observations live in data/price-history.json; rejected matches and evidence live in research/.",
+  "_updated_at": "2026-10-03T00:00:00Z",
+
+  "identity_rules": {
+    "primary_key": "manufacturer_part_number",
+    "rule": "A product may only enter data/products.json if it has a manufacturer part number confirmed from a manufacturer or retailer product page. Marketing titles are search aids only, never keys.",
+    "no_part_number": "Products discovered without a part number go to research/unresolved.json and are NOT tracked or published."
+  },
+
   "categories": [
     {
       "name": "laptops",
-      "search_terms": "laptop",
+      "search_terms": "ASUS Vivobook 16",
       "currency": "GBP",
-      "max_price": 500,
+      "max_price": 700,
       "retailers": [
-        "currys.co.uk",
+        "uk.store.asus.com",
+        "laptopoutlet.co.uk",
         "argos.co.uk",
-        "amazon.co.uk",
-        "very.co.uk"
+        "ao.com",
+        "currys.co.uk",
+        "johnlewis.com",
+        "very.co.uk",
+        "amazon.co.uk"
       ],
-      "keywords": [
-        "laptop",
-        "notebook"
-      ],
-      "exclude_keywords": [
-        "refurbished",
-        "used",
-        "second hand",
-        "parts",
-        "accessory"
+      "retailer_notes": {
+        "uk.store.asus.com": "Readable. Full spec table includes Model Number and Part Number. Primary identity source for ASUS.",
+        "laptopoutlet.co.uk": "Readable. Full spec table with SKU and part number. Must check stock status; exclude out_of_stock from lowest_verified.",
+        "argos.co.uk": "BLOCKED. HTTP 403 at Akamai edge. Confirmed by direct fetch and via Jina Reader. Do not retry aggressively.",
+        "ao.com": "Listing discovery works; page fetch returned CRAWL_UNKNOWN_ERROR via the current backend. Needs separate verification.",
+        "amazon.co.uk": "Marketplace listings. Aggregated 'from' prices are not current prices. Treat as UNVERIFIED until page read."
+      },
+      "keywords": ["Vivobook"],
+      "exclude_keywords": ["refurbished", "used", "renewed", "second hand", "parts", "accessory"],
+      "fetch_strategies": [
+        {
+          "retailer": "uk.store.asus.com",
+          "method": "direct_page_fetch",
+          "priority": 1
+        },
+        {
+          "retailer": "laptopoutlet.co.uk",
+          "method": "direct_page_fetch",
+          "priority": 1
+        },
+        {
+          "retailer": "argos.co.uk",
+          "method": "blocked_known",
+          "priority": 3,
+          "note": "Record BLOCKED with block_reason; do not attempt evasion."
+        }
       ]
     }
   ],
+
+  "tracked_part_numbers": [
+    {
+      "manufacturer_part_number": "90NB15F1-M00A60",
+      "expected_model_number": "M1607KA-MB148W",
+      "brand": "ASUS",
+      "marketing_title_hint": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+      "tracking_enabled": true,
+      "added_at": "2026-10-02T14:58:36Z"
+    },
+    {
+      "manufacturer_part_number": "90NB10R2-M01820",
+      "expected_model_number": "M1605YA-MB601W",
+      "brand": "ASUS",
+      "marketing_title_hint": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+      "tracking_enabled": true,
+      "added_at": "2026-10-02T14:58:36Z"
+    }
+  ],
+
   "global_settings": {
     "price_check_timeout": 30,
     "max_results_per_search": 10,
     "min_price_change_for_alert": 5.0,
-    "min_percent_change_for_alert": 10.0
+    "min_percent_change_for_alert": 10.0,
+
+    "verify_body_not_just_status": true,
+    "block_markers": [
+      "Access Denied",
+      "Target URL returned error",
+      "You don't have permission to access",
+      "errors.edgesuite.net",
+      "Attention Required",
+      "Enable JavaScript and cookies to continue"
+    ],
+    "jina_reader_host": "https://r.jina.ai/",
+
+    "evasion_attempts_allowed": false,
+    "evasion_note": "Header rotation, proxy rotation and CAPTCHA solving are prohibited. Record BLOCKED and move on.",
+
+    "lowest_verified_requires": {
+      "verification_status": "VERIFIED",
+      "availability": "in_stock",
+      "price_type": "standard",
+      "price_not_null": true
+    },
+    "never_substitute_unverified_price": true
   }
 }

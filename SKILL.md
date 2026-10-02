@@ -33,16 +33,63 @@ It consists of:
 * "Update the price radar" - Run a full price check cycle
 * "Show me the biggest price drops" - Largest price decreases
 
-## Data Format
+## Data Format (schema v2.0)
 
-### Products Configuration (config/products.json)
-Defines what products to track and search parameters.
+**Canonical identity is the `manufacturer_part_number`.** Marketing titles are search aids
+only and must never be used as keys - "M160" alone matches at least four different ASUS
+SKUs. A product without a confirmed part number is not tracked.
+
+Rejected near-matches and discovery evidence live in `research/` only. They are never
+written into `data/price-history.json`, which holds price observations exclusively.
+
+### Discovery Configuration (config/products.json)
+What to search for and where. Contains categories, search terms, retailer list, fetch
+strategies and enforcement rules. Holds **no prices**.
+
+Key enforcement settings:
+- `verify_body_not_just_status: true` - the response **body** must be inspected, not just the HTTP status.
+- `block_markers` - body strings that mean BLOCKED regardless of status code. Required because Jina Reader returns HTTP 200 with an `Access Denied` document; a status-only check records a false success.
+- `evasion_attempts_allowed: false` - header rotation, proxy rotation and CAPTCHA solving are prohibited. Record BLOCKED and move on.
+- `lowest_verified_requires` - status VERIFIED + availability in_stock + price_type standard + price non-null.
 
 ### Current Products (data/products.json)
-Current state of all tracked products with pricing information.
+Canonical tracking state keyed by `manufacturer_part_number`. Each product nests a
+`retailers` map so one product can hold multiple retailers, prices and availability states.
+
+Each retailer listing carries: `retailer_product_id`, `product_url`, `price`, `list_price`,
+`price_type`, `availability`, `last_verified`, `verification_status`, `verification_method`,
+`verification_source`, `evidence`, `block_reason`, `checked_at`.
+
+Enums:
+- `availability`: in_stock | out_of_stock | preorder | discontinued | unknown
+- `price_type`: standard | membership | voucher | finance_conditional
+- `verification_status`: VERIFIED | PARTIALLY_VERIFIED | UNVERIFIED | BLOCKED | STALE
+- `verification_method`: direct_page_fetch | structured_data | search_snippet | aggregator_reported | blocked
+
+`search_snippet` and `aggregator_reported` are **never publishable**. VERIFIED requires
+genuine evidence: a body read at source whose content was confirmed.
+
+`lowest_verified` is computed, never hand-entered, and requires all four conditions above.
+When nothing qualifies it is `null` and the site displays "No verified price". **Never
+substitute an unverified price to populate the site.**
+
+`spec_conflicts` records contradictory specs from different sources and stays
+`resolved: false` until evidence settles it. Never guess which value is correct.
 
 ### Price History (data/price-history.json)
-Chronological record of all price observations.
+Append-only observation log. One entry per retailer per check, including BLOCKED and
+UNVERIFIED runs, so a retailer that cannot be checked stays visible rather than absent.
+
+Structure: `{ _schema_version, observations[], migrated_legacy_records{}, diagnostics[] }`.
+Field is `observed_at` (not `timestamp`). BLOCKED entries carry `price: null`.
+
+`migrated_legacy_records` preserves pre-v2 title-keyed entries verbatim for audit. They
+carry `is_current_price: false` and `can_support_lowest_verified: false`.
+
+### Price-change alerts
+Only fire on a change in `lowest_verified` where the price was VERIFIED at **both** ends of
+the comparison. A VERIFIED -> BLOCKED transition must not fire a "price dropped" alert, and
+a newly discovered retailer's first observation establishes a baseline rather than a change.
 
 ### Google Sheets Structure
 Three worksheets:
@@ -87,13 +134,17 @@ For every tracked product, the skill must:
 * **Capture the direct product URL** from the actual product listing page.
 * **Never invent or construct a URL** if the direct URL cannot be verified.
 * **Store the URL** in:
-  - `data/products.json` (field: `url`)
-  - `data/price-history.json` (field: `url`)
+  - `data/products.json` (each retailer listing: field `product_url`)
+  - `data/price-history.json` (fields `product_url` and `verification_source`)
   - Google Sheets "Products" worksheet (column: URL)
   - GitHub repository (in the JSON files)
-* **Make the URL clickable** in Google Sheets (using the `=HYPERLINK` formula or rich link).
-* **Display a clickable "View Product" link** on the Price Radar website.
+* **Make the URL** clickable in Google Sheets (using the `=HYPERLINK` formula or rich link).
+* **Display a clickable "View Product" link** on the Price Radar website, taken from
+  `lowest_verified.product_url`.
 * **Preserve the source URL** with price-history records so historical observations retain their source.
+* **URLs must be direct retailer product URLs** - never a search page, category page or
+  redirector. The site's links come from `lowest_verified.product_url` and each listing's
+  `product_url`, both of which must be the retailer's own product page.
 
 The skill verifies the URL by extracting it directly from the product page; if no valid URL is found, the product is not tracked.
 

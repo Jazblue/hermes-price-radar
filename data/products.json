@@ -1,36 +1,251 @@
 {
-  "asus-vivobook-ai-16in-ryzen5-16gb-512gb-blue-argos": {
-    "product_id": "asus-vivobook-ai-16in-ryzen5-16gb-512gb-blue-argos",
-    "product": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
-    "manufacturer": "ASUS",
-    "model": "Vivobook AI 16in Ryzen 5",
-    "category": "laptops",
-    "retailer": "Argos",
-    "current_price": 549.0,
-    "currency": "GBP",
-    "lowest_recorded": 549.0,
-    "highest_recorded": 549.0,
-    "previous_price": 549.0,
-    "price_change": 0.0,
-    "url": "https://www.argos.co.uk/product/7741159",
-    "availability": "In stock",
-    "last_checked": "2026-10-02T14:58:36.938613+00:00"
+  "_schema_version": "2.0",
+  "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
+  "_updated_at": "2026-10-03T00:00:00Z",
+
+  "products": {
+    "90NB15F1-M00A60": {
+      "product_id": "asus-vivobook-16-m1607ka-mb148w",
+      "brand": "ASUS",
+      "model": "Vivobook 16 (M1607) Copilot+ PC",
+      "manufacturer_part_number": "90NB15F1-M00A60",
+      "model_number": "M1607KA-MB148W",
+      "alternate_part_numbers": [],
+      "marketing_title": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+      "key_specs": {
+        "cpu": "AMD Ryzen AI 5 330",
+        "ram": "16GB DDR5",
+        "storage": "512GB NVMe M.2 SSD",
+        "display": "16in WUXGA IPS 1920x1200",
+        "gpu": "AMD Radeon Graphics",
+        "os": "Windows 11 Home 64-bit",
+        "colour": "Quiet Blue"
+      },
+      "spec_conflicts": [
+        {
+          "field": "cpu",
+          "resolved": false,
+          "note": "UNRESOLVED - deliberately not guessed. Published with this flag visible rather than selecting a value.",
+          "values": [
+            {
+              "value": "AMD Ryzen AI 5 330, 4 Core-Processor",
+              "source": "uk.store.asus.com",
+              "source_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
+              "source_trust": "manufacturer_uk_store"
+            },
+            {
+              "value": "AMD Ryzen AI 5 RYZEN AI 5 330, hex core, 3.1GHz base / 4.7GHz burst",
+              "source": "argos.co.uk search snippet",
+              "source_url": "https://www.argos.co.uk/product/7741159",
+              "source_trust": "retailer_snippet_unverified"
+            },
+            {
+              "value": "AMD Ryzen AI 5 340",
+              "source": "icecat.biz, laptoparena.net",
+              "source_url": "https://icecat.biz/en/p/asus/90nb15f1-m00a60/vivobook-laptops-4711636109680-m1607ka-mb148w-132436332.html",
+              "source_trust": "catalogue_aggregator"
+            }
+          ]
+        }
+      ],
+      "retailers": {
+        "asus-uk-store": {
+          "retailer": "ASUS UK Store",
+          "retailer_slug": "asus-uk-store",
+          "retailer_product_id": "90NB15F1-M00A60",
+          "listing_title": "ASUS Vivobook 16 (M1607); Copilot+ PC",
+          "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
+          "price": 549.99,
+          "currency": "GBP",
+          "list_price": 749.99,
+          "price_type": "standard",
+          "availability": "in_stock",
+          "last_verified": "2026-10-03T00:00:00Z",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
+          "evidence": "Body read at source. 'Special Price GBP 549.99 / Regular Price GBP 749.99 / You save GBP 200'. Spec table: 'Model Number: M1607KA-MB148W', 'Part Number: 90NB15F1-M00A60'. Add to Cart present, delivery 2-3 business days.",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:00:00Z"
+        },
+        "laptopoutlet": {
+          "retailer": "Laptop Outlet",
+          "retailer_slug": "laptopoutlet",
+          "retailer_product_id": "M1607KA-MB148W",
+          "listing_title": "ASUS Vivobook 16 M1607KA-MB148W AMD Ryzen AI 5 330 16GB RAM 512GB SSD 16\" Windows 11 Home Copilot+ Laptop",
+          "product_url": "https://www.laptopoutlet.co.uk/asus-vivobook-16-90nb15f1-m00a60.html",
+          "price": 619.99,
+          "currency": "GBP",
+          "list_price": 749.99,
+          "price_type": "standard",
+          "availability": "out_of_stock",
+          "last_verified": "2026-10-03T00:00:00Z",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://www.laptopoutlet.co.uk/asus-vivobook-16-90nb15f1-m00a60.html",
+          "evidence": "Body read at source. 'GBP 619.99 inc. VAT' (ex-VAT GBP 516.66), was GBP 749.99, 'Save GBP 130'. Stock label 'Out of Stock'. SKU M1607KA-MB148W, part 90NB15F1-M00A60 confirmed on page.",
+          "excluded_from_lowest_verified_reason": "availability is out_of_stock",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:00:00Z"
+        },
+        "argos": {
+          "retailer": "Argos",
+          "retailer_slug": "argos",
+          "retailer_product_id": "7741159",
+          "listing_title": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+          "product_url": "https://www.argos.co.uk/product/7741159",
+          "price": null,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "BLOCKED",
+          "verification_method": "blocked",
+          "verification_source": "https://r.jina.ai/https://www.argos.co.uk/product/7741159",
+          "evidence": "Jina Reader returned HTTP 200 with body 'Title: Access Denied / Warning: Target URL returned error 403: Forbidden / You don't have permission to access http://www.argos.co.uk/product/7741159 on this server'. Reference #18.a8c83017.1790982640.7bab177d. Direct curl with desktop Chrome UA also returned HTTP 403.",
+          "block_reason": "HTTP 403 at Akamai edge (errors.edgesuite.net). Confirmed via direct fetch and Jina Reader. Not an Argos outage - consistent across attempts and via two independent paths.",
+          "checked_at": "2026-10-03T00:00:00Z",
+          "last_known_price_unverified": 549.0,
+          "last_known_price_at": "2026-10-02T14:58:36Z",
+          "last_known_price_note": "Retained for continuity only. NOT a current verified price. See data/price-history.json observation history_argos_7741159. Argos' own pages disagree on this price (549.00 product page, 499.00 category page, 629.99 laptops listing), so this figure is low-confidence even if access is restored."
+        },
+        "ao": {
+          "retailer": "AO",
+          "retailer_slug": "ao",
+          "retailer_product_id": null,
+          "listing_title": "ASUS Vivobook 16 M1607KA-MB148W Copilot+ PC - Blue",
+          "product_url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop--blue-107583-251.aspx",
+          "price": null,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": "search_snippet",
+          "verification_source": "web_search (Exa)",
+          "evidence": "Model number present in URL slug only. Page fetch returned CRAWL_UNKNOWN_ERROR - no price captured.",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:00:00Z"
+        }
+      },
+      "lowest_verified": {
+        "price": 549.99,
+        "currency": "GBP",
+        "retailer_slug": "asus-uk-store",
+        "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
+        "retailers_checked": 4,
+        "retailers_verified": 2,
+        "retailers_verified_and_purchasable": 1,
+        "computed_at": "2026-10-03T00:00:00Z"
+      },
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-02T14:58:36Z",
+        "notes": "Argos marketing title mapped to M1607KA-MB148W; part number confirmed on the ASUS UK store page. CPU spec conflict left unresolved by design."
+      }
+    },
+
+    "90NB10R2-M01820": {
+      "product_id": "asus-vivobook-16-m1605ya-mb601w",
+      "brand": "ASUS",
+      "model": "Vivobook 16 (M1605)",
+      "manufacturer_part_number": "90NB10R2-M01820",
+      "model_number": "M1605YA-MB601W",
+      "alternate_part_numbers": [],
+      "marketing_title": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+      "key_specs": {
+        "cpu": "AMD Ryzen 5 7430U",
+        "ram": "16GB DDR4",
+        "storage": "512GB NVMe M.2 SSD",
+        "display": "16in WUXGA IPS 1920x1200",
+        "gpu": "AMD Radeon Graphics",
+        "os": "Windows 11 Home 64-bit",
+        "colour": "Cool Silver"
+      },
+      "spec_conflicts": [],
+      "retailers": {
+        "asus-uk-store": {
+          "retailer": "ASUS UK Store",
+          "retailer_slug": "asus-uk-store",
+          "retailer_product_id": "90NB10R2-M01820",
+          "listing_title": "ASUS Vivobook 16 (M1605)",
+          "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+          "price": 499.99,
+          "currency": "GBP",
+          "list_price": 549.99,
+          "price_type": "standard",
+          "availability": "in_stock",
+          "last_verified": "2026-10-03T00:00:00Z",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+          "evidence": "Body read at source. 'Special Price GBP 499.99 / Regular Price GBP 549.99 / Save GBP 50'. Spec table: 'Model Number: M1605YA-MB601W', 'Part Number: 90NB10R2-M01820'. Add to Cart present, delivery 2-3 business days.",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:00:00Z"
+        },
+        "argos": {
+          "retailer": "Argos",
+          "retailer_slug": "argos",
+          "retailer_product_id": "7761225",
+          "listing_title": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+          "product_url": "https://www.argos.co.uk/product/7761225",
+          "price": null,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "BLOCKED",
+          "verification_method": "blocked",
+          "verification_source": "https://r.jina.ai/https://www.argos.co.uk/product/7761225",
+          "evidence": "Jina Reader returned HTTP 200 with body 'Title: Access Denied / Warning: Target URL returned error 403: Forbidden'. Reference #18.abc84d17.1790982643.44da1b7. Direct curl returned HTTP 403.",
+          "block_reason": "HTTP 403 at Akamai edge (errors.edgesuite.net).",
+          "checked_at": "2026-10-03T00:00:00Z",
+          "last_known_price_unverified": 549.0,
+          "last_known_price_at": "2026-10-02T14:58:36Z",
+          "last_known_price_note": "Retained for continuity only. NOT a current verified price, and NOT re-verifiable while blocked."
+        },
+        "amazon": {
+          "retailer": "Amazon UK",
+          "retailer_slug": "amazon",
+          "retailer_product_id": "B0BXKM1PQN",
+          "listing_title": "ASUS Vivobook 16 M1605YA Laptop | 16.0\" Full HD Screen | AMD Ryzen 5-7430U | 16GB RAM | 512GB SSD | Windows 11",
+          "product_url": "https://www.amazon.co.uk/ASUS-Vivobook-M1605YA-5-7430U-Windows/dp/B0BXKM1PQN",
+          "price": null,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": "aggregator_reported",
+          "verification_source": "web_search (Exa)",
+          "evidence": "Marketplace listing snippet shows 'New & Used (6) from GBP 398.99'. This is a marketplace aggregate across multiple offers, not a current single-seller price. Snippet's own spec table is self-contradictory (16GB in title, 8GB in RAM field). Page not read directly.",
+          "aggregate_price_seen": 398.99,
+          "aggregate_price_note": "Recorded as evidence only. Must NOT be promoted to the price field or into lowest_verified.",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:00:00Z"
+        }
+      },
+      "lowest_verified": {
+        "price": 499.99,
+        "currency": "GBP",
+        "retailer_slug": "asus-uk-store",
+        "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+        "retailers_checked": 3,
+        "retailers_verified": 1,
+        "retailers_verified_and_purchasable": 1,
+        "computed_at": "2026-10-03T00:00:00Z"
+      },
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-02T14:58:36Z",
+        "notes": "Argos page text states 'Model number: M1605YA-MB601W'. IMPORTANT: the ASUS UK price of GBP 499.99 is a separate, newly discovered verified listing from a DIFFERENT retailer. It is NOT an Argos price drop. Argos is BLOCKED and its last known price of GBP 549.00 could not be re-verified, so no price-change comparison against it is valid. No drop alert should be raised on this transition."
+      }
+    }
   },
-  "asus-vivobook-m160-16in-r5-16gb-512gb-silver-argos": {
-    "product_id": "asus-vivobook-m160-16in-r5-16gb-512gb-silver-argos",
-    "product": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
-    "manufacturer": "ASUS",
-    "model": "Vivobook M160 16in R5",
-    "category": "laptops",
-    "retailer": "Argos",
-    "current_price": 549.0,
-    "currency": "GBP",
-    "lowest_recorded": 549.0,
-    "highest_recorded": 549.0,
-    "previous_price": 549.0,
-    "price_change": 0.0,
-    "url": "https://www.argos.co.uk/product/7761225",
-    "availability": "In stock",
-    "last_checked": "2026-10-02T14:58:36.938613+00:00"
-  }
+
+  "unresolved": []
 }

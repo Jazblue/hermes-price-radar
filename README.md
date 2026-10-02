@@ -93,11 +93,35 @@ Daily cron follows: DISCOVER -> MATCH -> VERIFY -> RECORD -> COMPARE -> PUBLISH
 If a retailer cannot be checked, records the fact. Explicitly shows number of retailers verified vs discovered.
 
 ### Validation Test Results
-Test run on the two ASUS products:
-- ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue: 1 retailer discovered (Argos), 0 verified, lowest verified price: N/A
-- ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver: 1 retailer discovered (Argos), 0 verified, lowest verified price: N/A
+Test run on 2026-10-03, after Argos proved unreadable (HTTP 403 at its Akamai edge).
 
-All results PARTIALLY_VERIFIED - live page fetching required for full verification.
+Canonical identity resolved to exact manufacturer part numbers — marketing titles proved
+unreliable, since "M160" matches at least four different ASUS SKUs.
+
+| Part number | Product | Retailers discovered | Verified | Lowest verified price |
+|---|---|---|---|---|
+| 90NB15F1-M00A60 | Vivobook 16 M1607KA-MB148W (Blue) | 4 | 2 (1 purchasable) | **£549.99** (ASUS UK Store) |
+| 90NB10R2-M01820 | Vivobook 16 M1605YA-MB601W (Silver) | 3 | 1 | **£499.99** (ASUS UK Store) |
+
+Notes:
+- Laptop Outlet's Blue listing (£619.99) is VERIFIED but **out of stock**, so it is excluded from `lowest_verified`.
+- Both Argos listings are **BLOCKED**. Their last known £549.00 is retained as unverified history only, not a current price.
+- The Blue product has an **unresolved CPU spec conflict** (Ryzen AI 5 330 vs 340) and is published with that flag visible rather than a guessed value.
+- Amazon's "from £398.99" is a marketplace aggregate and is **not** treated as a price.
+- AO listings were discovered but could not be page-fetched, so remain UNVERIFIED.
+
+Full evidence: `research/alternative_retailers_20261003.md`, `research/jina_argos_test_20261003.md`,
+`research/rejected_matches.md`.
+
+### Data Schema (v2.0)
+
+Canonical product identity is the `manufacturer_part_number`. `config/products.json` holds
+discovery config only; `data/products.json` holds canonical tracking state keyed by part
+number with nested retailer listings; `data/price-history.json` is an append-only
+observation log; `research/` holds discovery evidence and rejected matches.
+
+`lowest_verified` requires VERIFIED + in_stock + standard + non-null price. When nothing
+qualifies it is `null` and the site shows "No verified price" — never a fallback number.
 
 
 
