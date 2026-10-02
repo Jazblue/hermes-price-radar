@@ -96,8 +96,10 @@ ok(legacy.every(r => r.price === 549.0), 'legacy price 549.00 preserved verbatim
 ok(legacy.every(r => r.verification_status === 'UNVERIFIED'), 'legacy records UNVERIFIED');
 ok(hist.observations.every(o => 'observed_at' in o), 'all observations use observed_at');
 const blockedObs = hist.observations.filter(o => o.verification_status === 'BLOCKED');
-ok(blockedObs.length === 2, '2 BLOCKED observations recorded (got ' + blockedObs.length + ')');
+// 2 per Argos product per run; the 2026-10-03T00:45Z run added a second pair.
+ok(blockedObs.length >= 2, 'BLOCKED observations recorded for Argos (got ' + blockedObs.length + ')');
 ok(blockedObs.every(o => o.price === null), 'BLOCKED observations carry price null');
+ok(blockedObs.every(o => o.retailer_slug === 'argos'), 'all BLOCKED observations are Argos');
 const diag = hist.diagnostics;
 ok(diag.some(d => d.retailer === 'Argos' && d.http_status_via_jina === 200 && d.body_contained_block_marker === true),
    'diagnostics record the Jina 200 + Access Denied trap');
@@ -123,7 +125,9 @@ ok(!('products' in cfg), 'config/products.json holds no product/pricing state');
 ok(!JSON.stringify(cfg).includes('current_price'), 'config contains no prices');
 
 console.log('\n=== 15. Website links are direct retailer URLs ===');
-const allowed = ['uk.store.asus.com', 'www.laptopoutlet.co.uk', 'www.argos.co.uk', 'ao.com', 'www.amazon.co.uk'];
+const allowed = ['uk.store.asus.com', 'www.laptopoutlet.co.uk', 'www.argos.co.uk', 'ao.com', 'www.amazon.co.uk',
+                 // discovered and verified in the 2026-10-03T00:45Z run
+                 'box.co.uk', 'www.technoworld.com', 'www.wmitsolutions.co.uk'];
 const bad = [];
 function checkUrl(u, where) {
   if (!u) return;

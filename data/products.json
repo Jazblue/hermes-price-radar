@@ -128,6 +128,52 @@
           "evidence": "Model number present in URL slug only. Page fetch returned CRAWL_UNKNOWN_ERROR - no price captured.",
           "block_reason": null,
           "checked_at": "2026-10-03T00:00:00Z"
+        },
+        "box": {
+          "retailer": "Box (box.co.uk)",
+          "retailer_slug": "box",
+          "retailer_product_id": "M1607KA-MB148W",
+          "listing_title": "ASUS Vivobook 16 M1607KA-MB148W AMD Ryzen AI 5 330 16GB RAM 512GB SSD 16\" Windows 11 Home Copilot+ Laptop",
+          "product_url": "https://box.co.uk/90nb15f1-m00a60-asus-vivobook-16-m1607ka-copilot",
+          "price": 619.99,
+          "currency": "GBP",
+          "list_price": 749.99,
+          "price_type": "standard",
+          "availability": "out_of_stock",
+          "last_verified": "2026-10-03T00:45:00Z",
+          "verification_status": "VERIFIED",
+          "verification_method": "structured_data",
+          "verification_source": "https://box.co.uk/90nb15f1-m00a60-asus-vivobook-16-m1607ka-copilot",
+          "evidence": "Body read at source. Exact MPN match: JSON-LD mpn '90NB15F1-M00A60', sku 'M1607KA-MB148W'. schema.org/Product offer: price 619.99 GBP, availability 'https://schema.org/OutOfStock', priceValidUntil 2026-10-03. Page shows 'GBP 619.99 / Was GBP 749.99 / Save GBP 130.00 / Out Of Stock'.",
+          "excluded_from_lowest_verified_reason": "availability is out_of_stock",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:45:00Z"
+        },
+        "technoworld": {
+          "retailer": "Technoworld",
+          "retailer_slug": "technoworld",
+          "retailer_product_id": "M1607KA-MB148W",
+          "listing_title": "ASUS Vivobook 16 M1607KA-MB148W Copilot+ PC AMD Ryzen AI 5 340 16GB 512GB SSD 16IN Win 11 Home Blue",
+          "product_url": "https://www.technoworld.com/asus-vivobook-16-m1607ka-mb148w-laptop",
+          "price": null,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "in_stock",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://www.technoworld.com/asus-vivobook-16-m1607ka-mb148w-laptop",
+          "evidence": "Page body read at source. Displays two figures 'GBP 604.15 GBP 503.46' with no inc/ex-VAT label. SKU M1607KA-MB148W and EAN 4711636109680 match. Stock status 'In stock', Condition New.",
+          "ambiguous_prices_seen": [
+            503.46,
+            604.15
+          ],
+          "ambiguity_note": "VAT interpretation is INFERRED from the arithmetic ratio (503.46 x 1.2 = 604.15, and 604.15 / 1.2 = 503.46), which suggests 503.46 is ex-VAT and 604.15 is inc-VAT. This was NOT confirmed from any page label. Neither figure is adopted as the current price. Neither may be used for lowest_verified and neither may trigger an alert.",
+          "spec_conflict_observed": "Retailer's H1 heading states 'AMD Ryzen AI 5 340' while its own body copy states 'up to AMD Ryzen AI 5 330 processor'. Retailer contradicts itself; adds a fourth reading to the unresolved cpu spec_conflict on this product.",
+          "excluded_from_lowest_verified_reason": "verification_status is UNVERIFIED and price is null",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:45:00Z"
         }
       },
       "lowest_verified": {
@@ -135,10 +181,10 @@
         "currency": "GBP",
         "retailer_slug": "asus-uk-store",
         "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
-        "retailers_checked": 4,
-        "retailers_verified": 2,
+        "retailers_checked": 6,
+        "retailers_verified": 3,
         "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-03T00:00:00Z"
+        "computed_at": "2026-10-03T00:45:00Z"
       },
       "tracking": {
         "enabled": true,
@@ -227,6 +273,26 @@
           "aggregate_price_note": "Recorded as evidence only. Must NOT be promoted to the price field or into lowest_verified.",
           "block_reason": null,
           "checked_at": "2026-10-03T00:00:00Z"
+        },
+        "wmit-solutions": {
+          "retailer": "WMIT Solutions",
+          "retailer_slug": "wmit-solutions",
+          "retailer_product_id": "M1605YA-MB601W",
+          "listing_title": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen™ 5 7430U Laptop 40.6 cm (16\") WUXGA - Silver",
+          "product_url": "https://www.wmitsolutions.co.uk/product/m1605ya-mb601w/",
+          "price": 613.27,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "preorder",
+          "last_verified": "2026-10-03T00:45:00Z",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://www.wmitsolutions.co.uk/product/m1605ya-mb601w/",
+          "evidence": "Body read at source. Price 'GBP 613.27'. Exact SKU match: 'SKU: M1605YA-MB601W', EAN 4711636109673. Specs match tracked product (AMD Ryzen 5 7430U, 16 GB DDR4, 512 GB PCIe 3.0 SSD, Windows 11 Home, Cool Silver). Availability text: 'Available on back-order'.",
+          "excluded_from_lowest_verified_reason": "availability is preorder, not in_stock",
+          "block_reason": null,
+          "checked_at": "2026-10-03T00:45:00Z"
         }
       },
       "lowest_verified": {
@@ -234,10 +300,10 @@
         "currency": "GBP",
         "retailer_slug": "asus-uk-store",
         "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
-        "retailers_checked": 3,
-        "retailers_verified": 1,
+        "retailers_checked": 4,
+        "retailers_verified": 2,
         "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-03T00:00:00Z"
+        "computed_at": "2026-10-03T00:45:00Z"
       },
       "tracking": {
         "enabled": true,
