@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2026-10-02T14:58:36.938613+00:00",
+    "product_id": "asus-vivobook-ai-16in-ryzen5-16gb-512gb-blue-argos",
+    "product": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+    "retailer": "Argos",
+    "price": 549.0,
+    "currency": "GBP",
+    "url": "https://www.argos.co.uk/product/7741159",
+    "availability": "In stock"
+  },
+  {
+    "timestamp": "2026-10-02T14:58:36.938613+00:00",
+    "product_id": "asus-vivobook-m160-16in-r5-16gb-512gb-silver-argos",
+    "product": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+    "retailer": "Argos",
+    "price": 549.0,
+    "currency": "GBP",
+    "url": "https://www.argos.co.uk/product/7761225",
+    "availability": "In stock"
+  }
+]
