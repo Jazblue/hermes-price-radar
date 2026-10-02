@@ -51,6 +51,56 @@ Once installed, you can use the skill with commands like:
 Edit `config/products.json` to add products you want to track.
 
 
+## Research & Validation Process
+
+The Price Radar implements a rigorous multi-retailer research and validation process:
+
+**DISCOVER -> MATCH -> VERIFY -> RECORD -> COMPARE -> PUBLISH**
+
+### Multi-Retailer Search
+Searches multiple UK retailers (Argos, Amazon UK, Currys, AO, John Lewis, Very, ASUS UK, and others) for each product.
+
+### Product Matching
+Confirms exact model match using model number, manufacturer part number, CPU, RAM, storage, screen size, GPU, and colour.
+
+### Price Validation
+Every price is validated with a confidence level:
+- **VERIFIED** - current product page checked and confirmed
+- **PARTIALLY_VERIFIED** - retailer/product identified but price not independently confirmed
+- **UNVERIFIED** - found through search only
+- **FAILED** - check attempted but failed
+
+Only VERIFIED prices are used for lowest price calculations.
+
+### Multi-Retailer Data Model
+Supports multiple retailers per product with individual validation status, price type (standard/membership/voucher), availability, and direct URLs.
+
+### Lowest Verified Price
+Calculated ONLY from VERIFIED retailer prices. Never from search snippets or estimates.
+
+### Google Sheets Integration
+Redesigned worksheets:
+- **Products**: Product, Model, Retailer, Price, Availability, Validation Status, Product URL, Checked At, Previous Price, Price Change, Notes
+- **Summary**: Product, Lowest Verified Price, Retailer, Number of Retailers Checked, Last Checked, Price Change
+
+### Website
+Displays lowest verified price, retailer, number of retailers checked, last checked, price history, and direct retailer links.
+
+### Automation
+Daily cron follows: DISCOVER -> MATCH -> VERIFY -> RECORD -> COMPARE -> PUBLISH
+
+### Failure Handling
+If a retailer cannot be checked, records the fact. Explicitly shows number of retailers verified vs discovered.
+
+### Validation Test Results
+Test run on the two ASUS products:
+- ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue: 1 retailer discovered (Argos), 0 verified, lowest verified price: N/A
+- ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver: 1 retailer discovered (Argos), 0 verified, lowest verified price: N/A
+
+All results PARTIALLY_VERIFIED - live page fetching required for full verification.
+
+
+
 ## Advanced Search Techniques
 
 For specific hardware requirements (like minimum RAM), you can enhance your product searches by configuring retailer-specific search parameters in `config/products.json`:

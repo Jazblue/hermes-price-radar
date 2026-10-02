@@ -227,3 +227,184 @@ The cron job will:
 - Check GitHub commit history for failed updates
 - Review Telegram alerts for accuracy and adjust thresholds as needed
 - Backup important data periodically despite redundant storage
+
+## Research & Validation Process
+
+The Price Radar uses a rigorous multi-retailer research and validation process:
+
+### DISCOVER -> MATCH -> VERIFY -> RECORD -> COMPARE -> PUBLISH
+
+**NOT:**
+SEARCH -> FIND CHEAP NUMBER -> PUBLISH
+
+### 1. Multi-Retailer Search
+
+For every product research run, search multiple UK retailers where the product is realistically available:
+
+- Argos
+- Amazon UK
+- Currys
+- AO
+- John Lewis
+- Very
+- ASUS UK
+- Other reputable UK retailers when relevant
+
+### 2. Product Matching
+
+Before recording a price, confirm that the retailer listing is the SAME product:
+
+- Exact model number
+- Manufacturer part number where available
+- CPU
+- RAM
+- Storage
+- Screen size
+- GPU where applicable
+- Colour where relevant
+
+Do NOT treat similar-looking laptops as the same product.
+
+### 3. Price Validation
+
+A price must come from the actual retailer product listing whenever possible.
+
+Do NOT treat as verified current prices:
+- Search-result snippets
+- Old cached prices
+- Review pages
+- Comparison-site prices
+- Marketplace estimates
+- Advertised "from" prices
+
+Record:
+- Current price
+- Availability
+- Retailer
+- Direct product URL
+- Date/time checked
+- Product identifier used for matching
+
+### 4. Delivery / Membership Pricing
+
+Clearly distinguish:
+- Standard advertised price
+- Membership/subscription price
+- Voucher/conditional price
+- Delivery charges where relevant
+
+Do not present a conditional price as the normal lowest price.
+
+### 5. Price Confidence
+
+Every retailer result has a validation state:
+
+- **VERIFIED** = current product page checked and product/price confirmed
+- **PARTIALLY_VERIFIED** = retailer/product identified but price could not be independently confirmed
+- **UNVERIFIED** = found through search/discovery only
+- **FAILED** = check attempted but failed
+
+Only VERIFIED prices may be used when calculating the lowest verified price.
+
+### 6. Multiple Retailer Results
+
+Internal data model supports multiple retailers per product:
+
+```
+Product
+  model
+  manufacturer
+  specifications
+  retailers[]
+    retailer
+    price
+    availability
+    url
+    checked_at
+    validation_status
+    notes
+```
+
+### 7. Lowest Price Calculation
+
+Calculate `lowest_verified_price` ONLY from retailers with `validation_status = VERIFIED`.
+
+Never choose the lowest number simply because it appears in a search result.
+
+### 8. Price History
+
+Maintain historical price records. When a price changes, record:
+
+- Previous price
+- New price
+- Retailer
+- Timestamp
+- Product
+- Source URL
+
+Do not overwrite historical information unnecessarily.
+
+### 9. Google Sheets
+
+Redesigned to represent multi-retailer research:
+
+**Products worksheet columns:**
+Product, Model, Retailer, Price, Availability, Validation Status, Product URL, Checked At, Previous Price, Price Change, Notes
+
+**Summary worksheet columns:**
+Product, Lowest Verified Price, Retailer, Number of Retailers Checked, Last Checked, Price Change
+
+### 10. Website
+
+The live website displays:
+- Product
+- Current lowest verified price
+- Retailer offering that price
+- Number of retailers checked
+- Last checked
+- Price history/change where available
+- Direct retailer links
+
+Do not display a price as "best price" unless it is based on VERIFIED retailer data.
+
+### 11. Automation
+
+The daily cron/skill follows: DISCOVER -> MATCH -> VERIFY -> RECORD -> COMPARE -> PUBLISH
+
+### 12. Failure Handling
+
+If a retailer cannot be checked, record that fact. Do not invent or estimate a price.
+
+If only one retailer can be verified, explicitly show "1 retailer verified" rather than implying comprehensive market comparison.
+
+### 13. Testing
+
+Use the two existing ASUS products as the test dataset:
+- ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue
+- ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver
+
+Validation test results:
+- PRODUCT 1 (ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue)
+  - Retailers discovered: 1 (Argos)
+  - Retailers successfully verified: 0
+  - Lowest verified price: NO VERIFIED PRICES
+  - Argos: £549.0 - PARTIALLY_VERIFIED - https://www.argos.co.uk/product/7741159
+
+- PRODUCT 2 (ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver)
+  - Retailers discovered: 1 (Argos)
+  - Retailers successfully verified: 0
+  - Lowest verified price: NO VERIFIED PRICES
+  - Argos: £549.0 - PARTIALLY_VERIFIED - https://www.argos.co.uk/product/7761225
+
+Note: All results are PARTIALLY_VERIFIED because live page fetching was not performed in the test environment. Full VERIFIED status requires live page fetch and spec confirmation.
+
+### 14. Critical Rule
+
+Accuracy is more important than the number of retailers.
+
+If Hermes cannot verify a price, SAY SO.
+
+Never fabricate a retailer price, product match, availability or URL.
+
+DO NOT publish new prices or change the live dataset until the validation report has been reviewed.
+

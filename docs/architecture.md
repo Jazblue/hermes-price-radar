@@ -153,6 +153,113 @@ Price Radar Skill (hermes skill)
 ]
 ```
 
+
+## Research & Validation Process
+
+The Price Radar implements a rigorous multi-retailer research and validation pipeline:
+
+```text
+DISCOVER
+    |
+    v
+MATCH (exact model number, part number, CPU, RAM, storage, screen, GPU, colour)
+    |
+    v
+VERIFY (live product page check -> VERIFIED / PARTIALLY_VERIFIED / UNVERIFIED / FAILED)
+    |
+    v
+RECORD (price, availability, URL, validation_status, price_type, delivery_cost, notes)
+    |
+    v
+COMPARE (calculate lowest_verified_price from VERIFIED retailers only)
+    |
+    v
+PUBLISH (update Google Sheets, GitHub, Website, Telegram)
+```
+
+### Data Model
+
+**Product** (canonical)
+- manufacturer
+- model
+- model_number
+- cpu
+- ram_gb
+- storage_gb
+- storage_type
+- screen_inches
+- gpu
+- colour
+- part_number
+
+**RetailerResult** (per retailer per product)
+- retailer
+- price
+- availability
+- url
+- checked_at
+- validation_status (VERIFIED / PARTIALLY_VERIFIED / UNVERIFIED / FAILED)
+- price_type (STANDARD / MEMBERSHIP / VOUCHER / CONDITIONAL / FROM_PRICE)
+- matched_specs
+- notes
+- delivery_cost
+- membership_required
+
+### Validation States
+
+- **VERIFIED** = live product page checked, exact model match confirmed, current price confirmed
+- **PARTIALLY_VERIFIED** = retailer/product identified but price not independently confirmed from live page
+- **UNVERIFIED** = found through search/discovery only
+- **FAILED** = check attempted but failed
+
+### Lowest Verified Price Calculation
+
+Only retailers with `validation_status = VERIFIED` and `price is not None` are considered.
+The minimum price among verified retailers becomes `lowest_verified_price`.
+
+### Google Sheets Schema
+
+**Products Worksheet:**
+Product, Model, Retailer, Price, Availability, Validation Status, Product URL, Checked At, Previous Price, Price Change, Notes
+
+**Summary Worksheet:**
+Product, Lowest Verified Price, Retailer, Number of Retailers Checked, Last Checked, Price Change
+
+### Automation Flow
+
+The daily cron job executes:
+1. DISCOVER - search configured retailers for products matching canonical specs
+2. MATCH - confirm exact model match using critical specifications
+3. VERIFY - fetch live product page, confirm price and specs
+4. RECORD - store price, availability, URL, validation status
+5. COMPARE - calculate lowest_verified_price from VERIFIED retailers
+6. PUBLISH - update Google Sheets, GitHub data files, website, Telegram
+
+### Failure Handling
+
+- Retailer check failures are recorded, not ignored
+- If only 1 retailer verified, explicitly display "1 retailer verified"
+- No price estimation or invention ever
+- Failed checks do not block other retailers
+
+### Test Validation Results
+
+Run on two ASUS products (Oct 2026):
+
+**ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue**
+- Retailers discovered: 1 (Argos)
+- Retailers verified: 0
+- Lowest verified price: N/A
+- Argos: £549.00 - PARTIALLY_VERIFIED
+
+**ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver**
+- Retailers discovered: 1 (Argos)
+- Retailers verified: 0
+- Lowest verified price: N/A
+- Argos: £549.00 - PARTIALLY_VERIFIED
+
+Note: Full VERIFIED status requires live page fetching which was not available in test environment.
+
 ## Integration Points
 
 ### Composio MCP
