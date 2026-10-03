@@ -23,14 +23,17 @@
         "currys.co.uk",
         "johnlewis.com",
         "very.co.uk",
-        "amazon.co.uk"
+        "amazon.co.uk",
+        "esupply.co.uk"
       ],
       "retailer_notes": {
         "uk.store.asus.com": "Readable. Full spec table includes Model Number and Part Number. Primary identity source for ASUS.",
         "laptopoutlet.co.uk": "Readable. Full spec table with SKU and part number. Must check stock status; exclude out_of_stock from lowest_verified.",
         "argos.co.uk": "BLOCKED. HTTP 403 at Akamai edge. Confirmed by direct fetch and via Jina Reader. Do not retry aggressively.",
         "ao.com": "Listing discovery works; page fetch returned CRAWL_UNKNOWN_ERROR via the current backend. Needs separate verification.",
-        "amazon.co.uk": "Marketplace listings. Aggregated 'from' prices are not current prices. Treat as UNVERIFIED until page read."
+        "amazon.co.uk": "Marketplace listings. Aggregated 'from' prices are not current prices. Treat as UNVERIFIED until page read.",
+        "johnlewis.com": "Readable. Full spec table with MPN, price, stock status, and direct product URL. 2-year guarantee included.",
+        "esupply.co.uk": "Readable. Full spec table with Dell SKU and part number. Windows 11 Pro business SKU. Primary identity source for Dell Inspiron 3530."
       },
       "keywords": ["Vivobook"],
       "exclude_keywords": ["refurbished", "used", "renewed", "second hand", "parts", "accessory"],
@@ -50,6 +53,16 @@
           "method": "blocked_known",
           "priority": 3,
           "note": "Record BLOCKED with block_reason; do not attempt evasion."
+        },
+        {
+          "retailer": "johnlewis.com",
+          "method": "direct_page_fetch",
+          "priority": 1
+        },
+        {
+          "retailer": "esupply.co.uk",
+          "method": "direct_page_fetch",
+          "priority": 1
         }
       ]
     }
@@ -71,6 +84,30 @@
       "marketing_title_hint": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
       "tracking_enabled": true,
       "added_at": "2026-10-02T14:58:36Z"
+    },
+    {
+      "manufacturer_part_number": "6CH4H",
+      "expected_model_number": "3530",
+      "brand": "Dell",
+      "marketing_title_hint": "Dell Inspiron 15 3530",
+      "tracking_enabled": true,
+      "added_at": "2026-10-03T00:45:00Z"
+    },
+    {
+      "manufacturer_part_number": "3XGG3",
+      "expected_model_number": "DC16251",
+      "brand": "Dell",
+      "marketing_title_hint": "Dell 16 DC16251",
+      "tracking_enabled": true,
+      "added_at": "2026-10-03T00:45:00Z"
+    },
+    {
+      "manufacturer_part_number": "D8WA6EA#ABU",
+      "expected_model_number": "15-fd1000nax",
+      "brand": "HP",
+      "marketing_title_hint": "HP 15-fd1000nax",
+      "tracking_enabled": true,
+      "added_at": "2026-10-03T00:45:00Z"
     }
   ],
 
