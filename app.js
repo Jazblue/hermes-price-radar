@@ -1,11 +1,4 @@
-// Proposed rewrite of app.js for schema v2 — NOT DEPLOYED, review only.
-// Two changes:
-//   1. products.json is now { _schema_version, products: {...} } — unwrap the .products map.
-//   2. price-history.json is now an object, not an array — read .observations.
-// Old code read: Object.keys(products) and history.length / history.slice(-5) / entry.timestamp.
-// Those all break silently (count becomes 1, cards render "Unknown Product") rather than erroring,
-// so the unwrap must be explicit.
-
+// Simplified app.js for Price Radar - shows product-store table from Google Sheets data
 document.addEventListener('DOMContentLoaded', function() {
     loadData();
 });
@@ -15,25 +8,22 @@ function loadData() {
         .then(response => response.json())
         .then(payload => {
             const products = payload.products || payload;   // tolerate both shapes during rollout
-            displayProducts(products);
-            const count = Object.keys(products).length;
-            document.getElementById('product-count').textContent = count;
+            fetch('data/price-history.json')
+                .then(response => response.json())
+                .then(payload2 => {
+                    const observations = payload2.observations || payload2;   // tolerate both shapes
+                    displayProductsTable(products, observations);
+                    const count = Object.keys(products).length;
+                    document.getElementById('product-count').textContent = count;
+                })
+                .catch(error => {
+                    console.error('Error loading price history:', error);
+                    document.getElementById('history-count').textContent = 'Error';
+                });
         })
         .catch(error => {
             console.error('Error loading products:', error);
             document.getElementById('product-count').textContent = 'Error';
-        });
-
-    fetch('data/price-history.json')
-        .then(response => response.json())
-        .then(payload => {
-            const observations = payload.observations || payload;   // tolerate both shapes
-            document.getElementById('history-count').textContent = observations.length;
-            displayRecentChanges(observations);
-        })
-        .catch(error => {
-            console.error('Error loading price history:', error);
-            document.getElementById('history-count').textContent = 'Error';
         });
 
     const now = new Date();
@@ -45,94 +35,110 @@ function escapeHtml(value) {
     if (value === null || value === undefined) return '';
     return String(value)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        .replace(/\"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-function displayProducts(products) {
+function displayProductsTable(products, observations) {
     const container = document.getElementById('products-container');
-
-    if (Object.keys(products).length === 0) {
-        container.innerHTML = '<p>No products being tracked yet.</p>';
-        return;
-    }
-
-    let html = '';
+    
+    // Build map: partNumber -> retailerSlug -> {productName, productUrl, latestObsTime, verifiedStats}
+    const stats = {};
+    
+    // First, initialize from products data
     for (const [partNumber, product] of Object.entries(products)) {
-
-        // lowest_verified is the only price allowed on the page.
-        // null means nothing was verified this run — show that plainly, never a fallback number.
-        const lowest = product.lowest_verified;
-        let priceBlock;
-        if (lowest && lowest.price !== null && lowest.price !== undefined) {
-            priceBlock = `
-                <div class="price">&pound;${escapeHtml(lowest.price)}</div>
-                <div class="retailer">${escapeHtml(lowest.retailer_slug)}</div>
-                <div class="meta">${escapeHtml(lowest.retailers_verified_and_purchasable)} of
-                    ${escapeHtml(lowest.retailers_checked)} retailers verified and in stock</div>
-                ${lowest.product_url ?
-                    `<div class="url"><a href="${escapeHtml(lowest.product_url)}" target="_blank" rel="noopener">View Product</a></div>` : ''}
-            `;
-        } else {
-            priceBlock = `
-                <div class="price">No verified price</div>
-                <div class="meta">${escapeHtml(lowest ? lowest.retailers_checked : 0)} retailers checked,
-                    none could be verified</div>
-            `;
+        stats[partNumber] = {};
+        for (const [retailerSlug, listing] = Object.entries(product.retailers || {})) {
+            stats[partNumber][retailerSlug] = {
+                productName: product.product || product.model || 'Unknown Product',
+                productUrl: listing.product_url || '',
+                latestObsTime: null, // will update from observations
+                verifiedStats: {
+                    current: null,
+                    lowest: null,
+                    highest: null,
+                    lastChecked: null
+                }
+            };
         }
-
-        // Per-retailer breakdown, so BLOCKED and out-of-stock are visible rather than hidden.
-        let retailerRows = '';
-        for (const listing of Object.values(product.retailers || {})) {
-            const priceText = listing.price === null || listing.price === undefined
-                ? '&mdash;'
-                : '&pound;' + escapeHtml(listing.price);
-            retailerRows += `
-                <tr>
-                    <td>${escapeHtml(listing.retailer)}</td>
-                    <td>${priceText}</td>
-                    <td>${escapeHtml(listing.availability)}</td>
-                    <td>${escapeHtml(listing.verification_status)}</td>
-                    <td>${listing.product_url ?
-                        `<a href="${escapeHtml(listing.product_url)}" target="_blank" rel="noopener">link</a>` : '&mdash;'}</td>
-                </tr>
-            `;
-        }
-
-        // An unresolved spec conflict must be surfaced, not buried.
-        const conflicts = (product.spec_conflicts || []).filter(c => !c.resolved);
-        const conflictBlock = conflicts.length
-            ? `<div class="warning">Specification conflict unresolved: ${conflicts.map(c => escapeHtml(c.field)).join(', ')}</div>`
-            : '';
-
-        html += `
-            <div class="product-card">
-                <h3>${escapeHtml(product.product || product.model || 'Unknown Product')}</h3>
-                <div class="part-number">Part number: ${escapeHtml(product.manufacturer_part_number || partNumber)}</div>
-                ${priceBlock}
-                ${conflictBlock}
-                <table class="retailer-table">
-                    <thead><tr><th>Retailer</th><th>Price</th><th>Availability</th><th>Status</th><th>URL</th></tr></thead>
-                    <tbody>${retailerRows}</tbody>
-                </table>
-            </div>
-        `;
     }
+    
+    // Process observations to fill latestObsTime and verified stats
+    for (const obs of observations) {
+        const partNumber = obs.manufacturer_part_number;
+        const retailerSlug = obs.retailer_slug;
+        if (!stats[partNumber] || !stats[partNumber][retailerSlug]) {
+            // unknown product/retailer, skip
+            continue;
+        }
+        const obsDate = new Date(obs.observed_at || obs.timestamp);
+        const item = stats[partNumber][retailerSlug];
+        // Update latest observation time (any status)
+        if (!item.latestObsTime || obsDate > item.latestObsTime) {
+            item.latestObsTime = obsDate;
+        }
+        // If verified and price present, update verified stats
+        if (obs.verification_status === 'VERIFIED' && obs.price !== null && obs.price !== undefined) {
+            const price = parseFloat(obs.price);
+            if (!isNaN(price)) {
+                const vs = item.verifiedStats;
+                if (vs.current === null || obsDate > new Date(vs.lastChecked || 0)) {
+                    vs.current = price;
+                    vs.lastChecked = obs.observed_at || obs.timestamp;
+                }
+                if (vs.lowest === null || price < vs.lowest) {
+                    vs.lowest = price;
+                }
+                if (vs.highest === null || price > vs.highest) {
+                    vs.highest = price;
+                }
+            }
+        }
+    }
+    
+    // Build table HTML
+    let html = '<table class="price-table"><thead><tr>';
+    html += '<th>Laptop</th><th>Store</th><th>Today\'s Price</th><th>Lowest Price</th><th>Highest Price</th><th>Store Link</th><th>Last Checked</th>';
+    html += '</tr></thead><tbody>';
+    
+    for (const [partNumber, retailers] = Object.entries(stats)) {
+        for (const [retailerSlug, data] = Object.entries(retailers)) {
+            const vs = data.verifiedStats;
+            const priceToday = vs.current !== null ? `£${vs.current.toFixed(2)}` : '-';
+            const lowest = vs.lowest !== null ? `£${vs.lowest.toFixed(2)}` : '-';
+            const highest = vs.highest !== null ? `£${vs.highest.toFixed(2)}` : '-';
+            const lastChecked = vs.lastChecked ? new Date(vs.lastChecked).toLocaleString() : '-';
+            const link = data.productUrl ? `<a href="${escapeHtml(data.productUrl)}" target="_blank" rel="noopener">link</a>` : '-';
+            html += `<tr>`;
+            html += `<td>${escapeHtml(data.productName)}</td>`;
+            html += `<td>${escapeHtml(retailerSlug)}</td>`;
+            html += `<td>${priceToday}</td>`;
+            html += `<td>${lowest}</td>`;
+            html += `<td>${highest}</td>`;
+            html += `<td>${link}</td>`;
+            html += `<td>${lastChecked}</td>`;
+            html += `</tr>`;
+        }
+    }
+    
+    html += '</tbody></table>';
+    
+    if (Object.keys(stats).length === 0 || Object.values(stats).flat().length === 0) {
+        html = '<p>No product-store data available.</p>';
+    }
+    
     container.innerHTML = html;
 }
 
+// Keep existing displayRecentChanges for sidebar
 function displayRecentChanges(observations) {
     const changesList = document.getElementById('changes-list');
-
     if (!observations || observations.length === 0) {
         changesList.textContent = 'No price history yet';
         return;
     }
-
     const recent = observations.slice(-5).reverse();
     let html = '';
-
     for (const entry of recent) {
-        // Field renamed timestamp -> observed_at. Accept both so mixed history renders.
         const rawDate = entry.observed_at || entry.timestamp;
         const date = new Date(rawDate);
         const shown = isNaN(date.getTime()) ? 'unknown date' : date.toLocaleDateString();
@@ -141,6 +147,5 @@ function displayRecentChanges(observations) {
         html += `<div><strong>${escapeHtml(entry.product || 'Unknown')}</strong> at ` +
                 `${escapeHtml(entry.retailer || 'Unknown')}: ${priceText} (${shown})${status}</div>`;
     }
-
     changesList.innerHTML = html;
 }
