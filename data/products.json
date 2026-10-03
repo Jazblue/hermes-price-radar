@@ -276,7 +276,7 @@
           "retailer": "WMIT Solutions",
           "retailer_slug": "wmit-solutions",
           "retailer_product_id": "M1605YA-MB601W",
-          "listing_title": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen\u2122 5 7430U Laptop 40.6 cm (16\") WUXGA - Silver",
+          "listing_title": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen™ 5 7430U Laptop 40.6 cm (16\") WUXGA - Silver",
           "product_url": "https://www.wmitsolutions.co.uk/product/m1605ya-mb601w/",
           "price": 613.27,
           "currency": "GBP",
@@ -361,7 +361,7 @@
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T00:45:00Z",
-        "notes": "Verified at eSupply with price \u00a3524.16. Windows 11 Pro. Mainstream pricing."
+        "notes": "Verified at eSupply with price £524.16. Windows 11 Pro. Mainstream pricing."
       }
     },
     "3XGG3": {
@@ -411,7 +411,7 @@
           "verification_status": "VERIFIED",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
-          "evidence": "Body read at source. Manufacturer part number (MPN) 3XGG3 in spec block. Price \u00a3749.00. Add to basket present. 2-year guarantee. Specs: Intel Core 5 120U, 16GB LPDDR5X, 512GB PCIe Gen4 NVMe, 16\" 2K 16:10 IPS, Intel Graphics, Windows 11 Home.",
+          "evidence": "Body read at source. Manufacturer part number (MPN) 3XGG3 in spec block. Price £749.00. Add to basket present. 2-year guarantee. Specs: Intel Core 5 120U, 16GB LPDDR5X, 512GB PCIe Gen4 NVMe, 16\" 2K 16:10 IPS, Intel Graphics, Windows 11 Home.",
           "block_reason": null,
           "checked_at": "2026-10-03T00:45:00Z"
         }
@@ -429,7 +429,7 @@
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T00:45:00Z",
-        "notes": "16\" screen with LPDDR5X soldered RAM (not upgradable). Core 5 120U. Windows 11 Home. \u00a3749 at John Lewis (upper bound of range). LPDDR5X is soldered/onboard."
+        "notes": "16\" screen with LPDDR5X soldered RAM (not upgradable). Core 5 120U. Windows 11 Home. £749 at John Lewis (upper bound of range). LPDDR5X is soldered/onboard."
       }
     },
     "D8WA6EA#ABU": {
@@ -465,7 +465,7 @@
           "last_verified": "2026-10-03T00:45:00Z",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
-          "evidence": "Body read at source. Manufacturer part number (MPN) D8WA6EA #ABU in spec block. Price \u00a3699.99 (was \u00a3899.99). Add to basket present. 2-year guarantee. Specs: Intel Core 7 (10c/12t, up to 5.0GHz), 16GB DDR4-3200 (2x8GB), 512GB PCIe NVMe, 15.6\" FHD 1920x1080, Intel Graphics, Windows 11 Home.",
+          "evidence": "Body read at source. Manufacturer part number (MPN) D8WA6EA #ABU in spec block. Price £699.99 (was £899.99). Add to basket present. 2-year guarantee. Specs: Intel Core 7 (10c/12t, up to 5.0GHz), 16GB DDR4-3200 (2x8GB), 512GB PCIe NVMe, 15.6\" FHD 1920x1080, Intel Graphics, Windows 11 Home.",
           "block_reason": null,
           "checked_at": "2026-10-03T00:45:00Z"
         }
@@ -483,193 +483,113 @@
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T00:45:00Z",
-        "notes": "Intel Core 7 (i7-tier, 10c/12t, up to 5.0GHz) - higher tier than target Core 5/i5. \u00a3699.99 at John Lewis (was \u00a3899.99, promo price). Power adapter sold separately (USB-C 65W). Windows 11 Home. Verified at John Lewis."
+        "notes": "Intel Core 7 (i7-tier, 10c/12t, up to 5.0GHz) - higher tier than target Core 5/i5. £699.99 at John Lewis (was £899.99, promo price). Power adapter sold separately (USB-C 65W). Windows 11 Home. Verified at John Lewis."
       }
     },
     "90NB0XXX-M00ABC": {
       "product_id": "temp-90NB0XXX-M00ABC",
       "brand": "ASUS",
-      "model": "Unknown",
+      "model": "M1600XA-MB001",
       "manufacturer_part_number": "90NB0XXX-M00ABC",
       "model_number": "M1600XA-MB001",
       "alternate_part_numbers": [],
       "marketing_title": "ASUS Vivobook Pro 16X OLED 16in Ryzen 7 16GB 1TB Laptop - Black",
       "key_specs": {},
       "spec_conflicts": [],
-      "retailers": {
-        "pending": {
-          "retailer": "Pending Verification",
-          "retailer_slug": "pending",
-          "retailer_product_id": null,
-          "listing_title": "Awaiting verification",
-          "product_url": "",
-          "price": null,
-          "currency": "GBP",
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "UNVERIFIED",
-          "verification_method": null,
-          "verification_source": null,
-          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
-          "block_reason": null,
-          "checked_at": null
-        }
-      },
+      "retailers": {},
       "lowest_verified": null,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T01:00:00Z",
         "notes": "Added manually to reach 10 laptops; awaiting verification."
-      }
+      },
+      "product": "ASUS Vivobook Pro 16X OLED 16in Ryzen 7 16GB 1TB Laptop - Black",
+      "placeholder_id": true,
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
     },
     "XXXXXX": {
       "product_id": "temp-XXXXXX",
       "brand": "Dell",
-      "model": "Unknown",
+      "model": "XPS15-9520",
       "manufacturer_part_number": "XXXXXX",
       "model_number": "XPS15-9520",
       "alternate_part_numbers": [],
       "marketing_title": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
       "key_specs": {},
       "spec_conflicts": [],
-      "retailers": {
-        "pending": {
-          "retailer": "Pending Verification",
-          "retailer_slug": "pending",
-          "retailer_product_id": null,
-          "listing_title": "Awaiting verification",
-          "product_url": "",
-          "price": null,
-          "currency": "GBP",
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "UNVERIFIED",
-          "verification_method": null,
-          "verification_source": null,
-          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
-          "block_reason": null,
-          "checked_at": null
-        }
-      },
+      "retailers": {},
       "lowest_verified": null,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T01:00:00Z",
         "notes": "Added manually to reach 10 laptops; awaiting verification."
-      }
+      },
+      "product": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "placeholder_id": true,
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
     },
     "YYYYYY#ABC": {
       "product_id": "temp-YYYYYY#ABC",
       "brand": "HP",
-      "model": "Unknown",
+      "model": "Spectre x360 14",
       "manufacturer_part_number": "YYYYYY#ABC",
       "model_number": "Spectre x360 14",
       "alternate_part_numbers": [],
       "marketing_title": "HP Spectre x360 14 inch 2-in-1 Laptop i7 16GB 512GB SSD - Blue",
       "key_specs": {},
       "spec_conflicts": [],
-      "retailers": {
-        "pending": {
-          "retailer": "Pending Verification",
-          "retailer_slug": "pending",
-          "retailer_product_id": null,
-          "listing_title": "Awaiting verification",
-          "product_url": "",
-          "price": null,
-          "currency": "GBP",
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "UNVERIFIED",
-          "verification_method": null,
-          "verification_source": null,
-          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
-          "block_reason": null,
-          "checked_at": null
-        }
-      },
+      "retailers": {},
       "lowest_verified": null,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T01:00:00Z",
         "notes": "Added manually to reach 10 laptops; awaiting verification."
-      }
+      },
+      "product": "HP Spectre x360 14 inch 2-in-1 Laptop i7 16GB 512GB SSD - Blue",
+      "placeholder_id": true,
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
     },
     "ZZZZZZ": {
       "product_id": "temp-ZZZZZZ",
       "brand": "Lenovo",
-      "model": "Unknown",
+      "model": "ThinkPad X1 Carbon Gen 9",
       "manufacturer_part_number": "ZZZZZZ",
       "model_number": "ThinkPad X1 Carbon Gen 9",
       "alternate_part_numbers": [],
       "marketing_title": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
       "key_specs": {},
       "spec_conflicts": [],
-      "retailers": {
-        "pending": {
-          "retailer": "Pending Verification",
-          "retailer_slug": "pending",
-          "retailer_product_id": null,
-          "listing_title": "Awaiting verification",
-          "product_url": "",
-          "price": null,
-          "currency": "GBP",
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "UNVERIFIED",
-          "verification_method": null,
-          "verification_source": null,
-          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
-          "block_reason": null,
-          "checked_at": null
-        }
-      },
+      "retailers": {},
       "lowest_verified": null,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T01:00:00Z",
         "notes": "Added manually to reach 10 laptops; awaiting verification."
-      }
+      },
+      "product": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "placeholder_id": true,
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
     },
     "AAAAAA": {
       "product_id": "temp-AAAAAA",
       "brand": "Acer",
-      "model": "Unknown",
+      "model": "Swift 3 SF314-43",
       "manufacturer_part_number": "AAAAAA",
       "model_number": "Swift 3 SF314-43",
       "alternate_part_numbers": [],
       "marketing_title": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
       "key_specs": {},
       "spec_conflicts": [],
-      "retailers": {
-        "pending": {
-          "retailer": "Pending Verification",
-          "retailer_slug": "pending",
-          "retailer_product_id": null,
-          "listing_title": "Awaiting verification",
-          "product_url": "",
-          "price": null,
-          "currency": "GBP",
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "UNVERIFIED",
-          "verification_method": null,
-          "verification_source": null,
-          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
-          "block_reason": null,
-          "checked_at": null
-        }
-      },
+      "retailers": {},
       "lowest_verified": null,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T01:00:00Z",
         "notes": "Added manually to reach 10 laptops; awaiting verification."
-      }
+      },
+      "product": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "placeholder_id": true,
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
     }
   },
   "unresolved": []

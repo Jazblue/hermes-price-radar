@@ -1,14 +1,12 @@
 {
   "_schema_version": "2.0",
   "_file_role": "DISCOVERY CONFIG ONLY. Declares what to search for and where. Canonical tracking state lives in data/products.json; historical observations live in data/price-history.json; rejected matches and evidence live in research/.",
-  "_updated_at": "2026-10-03T00:00:00Z",
-
+  "_updated_at": "2026-10-03T01:00:00Z",
   "identity_rules": {
     "primary_key": "manufacturer_part_number",
     "rule": "A product may only enter data/products.json if it has a manufacturer part number confirmed from a manufacturer or retailer product page. Marketing titles are search aids only, never keys.",
     "no_part_number": "Products discovered without a part number go to research/unresolved.json and are NOT tracked or published."
   },
-
   "categories": [
     {
       "name": "laptops",
@@ -35,8 +33,17 @@
         "johnlewis.com": "Readable. Full spec table with MPN, price, stock status, and direct product URL. 2-year guarantee included.",
         "esupply.co.uk": "Readable. Full spec table with Dell SKU and part number. Windows 11 Pro business SKU. Primary identity source for Dell Inspiron 3530."
       },
-      "keywords": ["Vivobook"],
-      "exclude_keywords": ["refurbished", "used", "renewed", "second hand", "parts", "accessory"],
+      "keywords": [
+        "Vivobook"
+      ],
+      "exclude_keywords": [
+        "refurbished",
+        "used",
+        "renewed",
+        "second hand",
+        "parts",
+        "accessory"
+      ],
       "fetch_strategies": [
         {
           "retailer": "uk.store.asus.com",
@@ -67,7 +74,6 @@
       ]
     }
   ],
-
   "tracked_part_numbers": [
     {
       "manufacturer_part_number": "90NB15F1-M00A60",
@@ -108,15 +114,63 @@
       "marketing_title_hint": "HP 15-fd1000nax",
       "tracking_enabled": true,
       "added_at": "2026-10-03T00:45:00Z"
+    },
+    {
+      "manufacturer_part_number": "90NB0XXX-M00ABC",
+      "expected_model_number": "M1600XA-MB001",
+      "brand": "ASUS",
+      "marketing_title_hint": "ASUS Vivobook Pro 16X OLED 16in Ryzen 7 16GB 1TB Laptop - Black",
+      "tracking_enabled": false,
+      "added_at": "2026-10-03T01:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "XXXXXX",
+      "expected_model_number": "XPS15-9520",
+      "brand": "Dell",
+      "marketing_title_hint": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "tracking_enabled": false,
+      "added_at": "2026-10-03T01:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "YYYYYY#ABC",
+      "expected_model_number": "Spectre x360 14",
+      "brand": "HP",
+      "marketing_title_hint": "HP Spectre x360 14 inch 2-in-1 Laptop i7 16GB 512GB SSD - Blue",
+      "tracking_enabled": false,
+      "added_at": "2026-10-03T01:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "ZZZZZZ",
+      "expected_model_number": "ThinkPad X1 Carbon Gen 9",
+      "brand": "Lenovo",
+      "marketing_title_hint": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "tracking_enabled": false,
+      "added_at": "2026-10-03T01:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "AAAAAA",
+      "expected_model_number": "Swift 3 SF314-43",
+      "brand": "Acer",
+      "marketing_title_hint": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "tracking_enabled": false,
+      "added_at": "2026-10-03T01:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
     }
   ],
-
   "global_settings": {
     "price_check_timeout": 30,
     "max_results_per_search": 10,
     "min_price_change_for_alert": 5.0,
     "min_percent_change_for_alert": 10.0,
-
     "verify_body_not_just_status": true,
     "block_markers": [
       "Access Denied",
@@ -127,10 +181,8 @@
       "Enable JavaScript and cookies to continue"
     ],
     "jina_reader_host": "https://r.jina.ai/",
-
     "evasion_attempts_allowed": false,
     "evasion_note": "Header rotation, proxy rotation and CAPTCHA solving are prohibited. Record BLOCKED and move on.",
-
     "lowest_verified_requires": {
       "verification_status": "VERIFIED",
       "availability": "in_stock",

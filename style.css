@@ -43,10 +43,59 @@ h1 {
 }
 
 #products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+/* Simple product/store table. The container is a block, not a grid, so the
+   table can lay out naturally at any width. */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.price-table th,
+.price-table td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+
+.price-table th {
+    background: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.price-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.price-table a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.price-table a:hover {
+    text-decoration: underline;
+}
+
+.placeholder-flag {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    border-radius: 4px;
+    padding: 0 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .product-card {
@@ -126,6 +175,6 @@ h1 {
     }
     
     #products-container {
-        grid-template-columns: 1fr;
+        overflow-x: auto;
     }
 }

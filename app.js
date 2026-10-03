@@ -15,6 +15,8 @@ function loadData() {
                     displayProductsTable(products, observations);
                     const count = Object.keys(products).length;
                     document.getElementById('product-count').textContent = count;
+                    document.getElementById('history-count').textContent = observations.length;
+                    displayRecentChanges(observations);
                 })
                 .catch(error => {
                     console.error('Error loading price history:', error);
@@ -47,7 +49,7 @@ function displayProductsTable(products, observations) {
     // First, initialize from products data
     for (const [partNumber, product] of Object.entries(products)) {
         stats[partNumber] = {};
-        for (const [retailerSlug, listing] = Object.entries(product.retailers || {})) {
+        for (const [retailerSlug, listing] of Object.entries(product.retailers || {})) {
             stats[partNumber][retailerSlug] = {
                 productName: product.product || product.model || 'Unknown Product',
                 productUrl: listing.product_url || '',
@@ -100,8 +102,21 @@ function displayProductsTable(products, observations) {
     html += '<th>Laptop</th><th>Store</th><th>Today\'s Price</th><th>Lowest Price</th><th>Highest Price</th><th>Store Link</th><th>Last Checked</th>';
     html += '</tr></thead><tbody>';
     
-    for (const [partNumber, retailers] = Object.entries(stats)) {
-        for (const [retailerSlug, data] = Object.entries(retailers)) {
+    for (const [partNumber, retailers] of Object.entries(stats)) {
+        // A laptop must appear even when it has no store rows yet.
+        // A product flagged placeholder_id must not be shown as a genuine identifier.
+        const entries = Object.entries(retailers);
+        if (entries.length === 0) {
+            const product = products[partNumber];
+            const name = product.product || product.model || product.marketing_title || 'Unknown Product';
+            html += `<tr>`;
+            html += `<td>${escapeHtml(name)}${placeholderBadge(product)}</td>`;
+            html += `<td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>`;
+            html += `</tr>`;
+            continue;
+        }
+        for (const [retailerSlug, data] of entries) {
+            const product = products[partNumber];
             const vs = data.verifiedStats;
             const priceToday = vs.current !== null ? `£${vs.current.toFixed(2)}` : '-';
             const lowest = vs.lowest !== null ? `£${vs.lowest.toFixed(2)}` : '-';
@@ -109,7 +124,7 @@ function displayProductsTable(products, observations) {
             const lastChecked = vs.lastChecked ? new Date(vs.lastChecked).toLocaleString() : '-';
             const link = data.productUrl ? `<a href="${escapeHtml(data.productUrl)}" target="_blank" rel="noopener">link</a>` : '-';
             html += `<tr>`;
-            html += `<td>${escapeHtml(data.productName)}</td>`;
+            html += `<td>${escapeHtml(data.productName)}${placeholderBadge(product)}</td>`;
             html += `<td>${escapeHtml(retailerSlug)}</td>`;
             html += `<td>${priceToday}</td>`;
             html += `<td>${lowest}</td>`;
@@ -122,11 +137,17 @@ function displayProductsTable(products, observations) {
     
     html += '</tbody></table>';
     
-    if (Object.keys(stats).length === 0 || Object.values(stats).flat().length === 0) {
+    if (Object.keys(stats).length === 0) {
         html = '<p>No product-store data available.</p>';
     }
     
     container.innerHTML = html;
+}
+
+// Placeholder part numbers are not real identifiers. Flag them visibly.
+function placeholderBadge(product) {
+    if (!product || !product.placeholder_id) return '';
+    return ` <span class="placeholder-flag">[PLACEHOLDER ID - not verified]</span>`;
 }
 
 // Keep existing displayRecentChanges for sidebar
