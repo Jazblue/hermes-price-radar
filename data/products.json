@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-03T00:00:00Z",
+  "_updated_at": "2026-10-03T01:00:00Z",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -467,8 +467,7 @@
           "verification_source": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
           "evidence": "Body read at source. Manufacturer part number (MPN) D8WA6EA #ABU in spec block. Price \u00a3699.99 (was \u00a3899.99). Add to basket present. 2-year guarantee. Specs: Intel Core 7 (10c/12t, up to 5.0GHz), 16GB DDR4-3200 (2x8GB), 512GB PCIe NVMe, 15.6\" FHD 1920x1080, Intel Graphics, Windows 11 Home.",
           "block_reason": null,
-          "checked_at": "2026-10-03T00:45:00Z",
-          "verification_status": "VERIFIED"
+          "checked_at": "2026-10-03T00:45:00Z"
         }
       },
       "lowest_verified": {
@@ -485,6 +484,191 @@
         "enabled": true,
         "added_at": "2026-10-03T00:45:00Z",
         "notes": "Intel Core 7 (i7-tier, 10c/12t, up to 5.0GHz) - higher tier than target Core 5/i5. \u00a3699.99 at John Lewis (was \u00a3899.99, promo price). Power adapter sold separately (USB-C 65W). Windows 11 Home. Verified at John Lewis."
+      }
+    },
+    "90NB0XXX-M00ABC": {
+      "product_id": "temp-90NB0XXX-M00ABC",
+      "brand": "ASUS",
+      "model": "Unknown",
+      "manufacturer_part_number": "90NB0XXX-M00ABC",
+      "model_number": "M1600XA-MB001",
+      "alternate_part_numbers": [],
+      "marketing_title": "ASUS Vivobook Pro 16X OLED 16in Ryzen 7 16GB 1TB Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {
+        "pending": {
+          "retailer": "Pending Verification",
+          "retailer_slug": "pending",
+          "retailer_product_id": null,
+          "listing_title": "Awaiting verification",
+          "product_url": "",
+          "price": null,
+          "currency": "GBP",
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": null,
+          "verification_source": null,
+          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
+          "block_reason": null,
+          "checked_at": null
+        }
+      },
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-03T01:00:00Z",
+        "notes": "Added manually to reach 10 laptops; awaiting verification."
+      }
+    },
+    "XXXXXX": {
+      "product_id": "temp-XXXXXX",
+      "brand": "Dell",
+      "model": "Unknown",
+      "manufacturer_part_number": "XXXXXX",
+      "model_number": "XPS15-9520",
+      "alternate_part_numbers": [],
+      "marketing_title": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {
+        "pending": {
+          "retailer": "Pending Verification",
+          "retailer_slug": "pending",
+          "retailer_product_id": null,
+          "listing_title": "Awaiting verification",
+          "product_url": "",
+          "price": null,
+          "currency": "GBP",
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": null,
+          "verification_source": null,
+          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
+          "block_reason": null,
+          "checked_at": null
+        }
+      },
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-03T01:00:00Z",
+        "notes": "Added manually to reach 10 laptops; awaiting verification."
+      }
+    },
+    "YYYYYY#ABC": {
+      "product_id": "temp-YYYYYY#ABC",
+      "brand": "HP",
+      "model": "Unknown",
+      "manufacturer_part_number": "YYYYYY#ABC",
+      "model_number": "Spectre x360 14",
+      "alternate_part_numbers": [],
+      "marketing_title": "HP Spectre x360 14 inch 2-in-1 Laptop i7 16GB 512GB SSD - Blue",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {
+        "pending": {
+          "retailer": "Pending Verification",
+          "retailer_slug": "pending",
+          "retailer_product_id": null,
+          "listing_title": "Awaiting verification",
+          "product_url": "",
+          "price": null,
+          "currency": "GBP",
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": null,
+          "verification_source": null,
+          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
+          "block_reason": null,
+          "checked_at": null
+        }
+      },
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-03T01:00:00Z",
+        "notes": "Added manually to reach 10 laptops; awaiting verification."
+      }
+    },
+    "ZZZZZZ": {
+      "product_id": "temp-ZZZZZZ",
+      "brand": "Lenovo",
+      "model": "Unknown",
+      "manufacturer_part_number": "ZZZZZZ",
+      "model_number": "ThinkPad X1 Carbon Gen 9",
+      "alternate_part_numbers": [],
+      "marketing_title": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {
+        "pending": {
+          "retailer": "Pending Verification",
+          "retailer_slug": "pending",
+          "retailer_product_id": null,
+          "listing_title": "Awaiting verification",
+          "product_url": "",
+          "price": null,
+          "currency": "GBP",
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": null,
+          "verification_source": null,
+          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
+          "block_reason": null,
+          "checked_at": null
+        }
+      },
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-03T01:00:00Z",
+        "notes": "Added manually to reach 10 laptops; awaiting verification."
+      }
+    },
+    "AAAAAA": {
+      "product_id": "temp-AAAAAA",
+      "brand": "Acer",
+      "model": "Unknown",
+      "manufacturer_part_number": "AAAAAA",
+      "model_number": "Swift 3 SF314-43",
+      "alternate_part_numbers": [],
+      "marketing_title": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {
+        "pending": {
+          "retailer": "Pending Verification",
+          "retailer_slug": "pending",
+          "retailer_product_id": null,
+          "listing_title": "Awaiting verification",
+          "product_url": "",
+          "price": null,
+          "currency": "GBP",
+          "price_type": "standard",
+          "availability": "unknown",
+          "last_verified": null,
+          "verification_status": "UNVERIFIED",
+          "verification_method": null,
+          "verification_source": null,
+          "evidence": "Placeholder entry to ensure product appears in table; no price verified yet.",
+          "block_reason": null,
+          "checked_at": null
+        }
+      },
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-03T01:00:00Z",
+        "notes": "Added manually to reach 10 laptops; awaiting verification."
       }
     }
   },
