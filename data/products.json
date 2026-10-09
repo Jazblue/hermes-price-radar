@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-03T01:00:00Z",
+  "_updated_at": "2026-10-09T00:00:00Z",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -590,6 +590,321 @@
       "product": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
       "placeholder_id": true,
       "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+    },
+    "ACER-SWIFT-14-SF314-43": {
+      "product_id": "temp-acer-swift-14-sf314-43",
+      "brand": "Acer",
+      "model": "Swift 3 SF314-43",
+      "manufacturer_part_number": "ACER-SWIFT-14-SF314-43",
+      "model_number": "Swift 3 SF314-43",
+      "alternate_part_numbers": [],
+      "marketing_title": "Acer Swift 3 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Acer Swift 3 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "HP-SPECTRE-X360-14": {
+      "product_id": "temp-hp-spectre-x360-14",
+      "brand": "HP",
+      "model": "Spectre x360 14",
+      "manufacturer_part_number": "HP-SPECTRE-X360-14",
+      "model_number": "Spectre x360 14",
+      "alternate_part_numbers": [],
+      "marketing_title": "HP Spectre x360 14 inch 2-in-1 Laptop i5 16GB 512GB SSD - Silver",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "HP Spectre x360 14 inch 2-in-1 Laptop i5 16GB 512GB SSD - Silver",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "DELL-XPS-15-9520": {
+      "product_id": "temp-dell-xps-15-9520",
+      "brand": "Dell",
+      "model": "XPS15-9520",
+      "manufacturer_part_number": "DELL-XPS-15-9520",
+      "model_number": "XPS15-9520",
+      "alternate_part_numbers": [],
+      "marketing_title": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "LENOVO-THINKPAD-X1-CARBON": {
+      "product_id": "temp-lenovo-thinkpad-x1-carbon",
+      "brand": "Lenovo",
+      "model": "ThinkPad X1 Carbon Gen 9",
+      "manufacturer_part_number": "LENOVO-THINKPAD-X1-CARBON",
+      "model_number": "ThinkPad X1 Carbon Gen 9",
+      "alternate_part_numbers": [],
+      "marketing_title": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "MACBOOK-PRO-14-M1": {
+      "product_id": "temp-macbook-pro-14-m1",
+      "brand": "Apple",
+      "model": "MacBook Pro 14",
+      "manufacturer_part_number": "MACBOOK-PRO-14-M1",
+      "model_number": "MacBook Pro 14",
+      "alternate_part_numbers": [],
+      "marketing_title": "Apple MacBook Pro 14 14in M1 Pro 16GB 512GB SSD Laptop - Space Gray",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Apple MacBook Pro 14 14in M1 Pro 16GB 512GB SSD Laptop - Space Gray",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "MSI-GP-LX-X13": {
+      "product_id": "temp-msi-gp-lx-x13",
+      "brand": "MSI",
+      "model": "GP-LX-X13",
+      "manufacturer_part_number": "MSI-GP-LX-X13",
+      "model_number": "GP-LX-X13",
+      "alternate_part_numbers": [],
+      "marketing_title": "MSI GeForce Now GP66 Legion 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "MSI GeForce Now GP66 Legion 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "RAZER-BLADE-15-ADVANCED": {
+      "product_id": "temp-razer-blade-15-advanced",
+      "brand": "Razer",
+      "model": "Blade 15 Advanced",
+      "manufacturer_part_number": "RAZER-BLADE-15-ADVANCED",
+      "model_number": "Blade 15 Advanced",
+      "alternate_part_numbers": [],
+      "marketing_title": "Razer Blade 15 Advanced 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Razer Blade 15 Advanced 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "SURFACE-PRO-8-i5-128": {
+      "product_id": "temp-surface-pro-8-i5-128",
+      "brand": "Microsoft",
+      "model": "Surface Pro 8",
+      "manufacturer_part_number": "SURFACE-PRO-8-i5-128",
+      "model_number": "Surface Pro 8",
+      "alternate_part_numbers": [],
+      "marketing_title": "Microsoft Surface Pro 8 13in i5 8GB 256GB SSD Tablet - Platinum",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Microsoft Surface Pro 8 13in i5 8GB 256GB SSD Tablet - Platinum",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "ALIENWARE-M15-R6": {
+      "product_id": "temp-alienware-m15-r6",
+      "brand": "Dell",
+      "model": "M15 R6",
+      "manufacturer_part_number": "ALIENWARE-M15-R6",
+      "model_number": "M15 R6",
+      "alternate_part_numbers": [],
+      "marketing_title": "Dell Alienware M15 R6 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Dell Alienware M15 R6 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "AOC-U2490VX": {
+      "product_id": "temp-aoc-u2490vx",
+      "brand": "AOC",
+      "model": "U2490VX",
+      "manufacturer_part_number": "AOC-U2490VX",
+      "model_number": "U2490VX",
+      "alternate_part_numbers": [],
+      "marketing_title": "AOC U2490VX 24.9in 4K Ultra HD IPS Monitor with USB-C",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "AOC U2490VX 24.9in 4K Ultra HD IPS Monitor with USB-C",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "ASUS-ROG-STRIX-SCARYGAME": {
+      "product_id": "temp-asus-rog-strix-scarygame",
+      "brand": "ASUS",
+      "model": "Scar III Gaming",
+      "manufacturer_part_number": "ASUS-ROG-STRIX-SCARYGAME",
+      "model_number": "Scar III Gaming",
+      "alternate_part_numbers": [],
+      "marketing_title": "ASUS ROG Strix Scar III 17.3in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "ASUS ROG Strix Scar III 17.3in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "LG-34WN-OLKEN": {
+      "product_id": "temp-lg-34wn-olken",
+      "brand": "LG",
+      "model": "34WN-OLKEN",
+      "manufacturer_part_number": "LG-34WN-OLKEN",
+      "model_number": "34WN-OLKEN",
+      "alternate_part_numbers": [],
+      "marketing_title": "LG 34WN-OLKEN 34in 21:9 Ultra Wide IPS Monitor - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "LG 34WN-OLKEN 34in 21:9 Ultra Wide IPS Monitor - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "SAMSUNG-GAMING-ODYSSEY": {
+      "product_id": "temp-samsung-gaming-odyssey",
+      "brand": "Samsung",
+      "model": "Odyssey G5",
+      "manufacturer_part_number": "SAMSUNG-GAMING-ODYSSEY",
+      "model_number": "Odyssey G5",
+      "alternate_part_numbers": [],
+      "marketing_title": "Samsung Odyssey G5 27in 165Hz QHD Gaming Monitor - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "Samsung Odyssey G5 27in 165Hz QHD Gaming Monitor - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "CYBERPOWERPC- Gamer-Xtreme": {
+      "product_id": "temp-cyberpowerpc- gamer-xtreme",
+      "brand": "CyberPowerPC",
+      "model": "Gamer Xtreme",
+      "manufacturer_part_number": "CYBERPOWERPC- Gamer-Xtreme",
+      "model_number": "Gamer Xtreme",
+      "alternate_part_numbers": [],
+      "marketing_title": "CyberPowerPC Gamer Xtreme 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "CyberPowerPC Gamer Xtreme 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    "HP-OMEN-15-EH1057NR": {
+      "product_id": "temp-hp-omen-15-eh1057nr",
+      "brand": "HP",
+      "model": "OMEN 15-EH1057NR",
+      "manufacturer_part_number": "HP-OMEN-15-EH1057NR",
+      "model_number": "OMEN 15-EH1057NR",
+      "alternate_part_numbers": [],
+      "marketing_title": "HP OMEN 15-EH1057NR 15.6in i7 16GB 1TB SSD Gaming Laptop - Omen Black",
+      "key_specs": {},
+      "spec_conflicts": [],
+      "retailers": {},
+      "lowest_verified": null,
+      "tracking": {
+        "enabled": true,
+        "added_at": "2026-10-09T00:00:00Z",
+        "notes": "Added automatically to reach 20 tracked laptops; awaiting verification."
+      },
+      "product": "HP OMEN 15-EH1057NR 15.6in i7 16GB 1TB SSD Gaming Laptop - Omen Black",
+      "placeholder_id": false,
+      "placeholder_note": null
     }
   },
   "unresolved": []
