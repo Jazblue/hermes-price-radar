@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "DISCOVERY CONFIG ONLY. Declares what to search for and where. Canonical tracking state lives in data/products.json; historical observations live in data/price-history.json; rejected matches and evidence live in research/.",
-  "_updated_at": "2026-10-03T01:00:00Z",
+  "_updated_at": "2026-10-09T00:00:00Z",
   "identity_rules": {
     "primary_key": "manufacturer_part_number",
     "rule": "A product may only enter data/products.json if it has a manufacturer part number confirmed from a manufacturer or retailer product page. Marketing titles are search aids only, never keys.",
@@ -164,6 +164,256 @@
       "added_at": "2026-10-03T01:00:00Z",
       "placeholder_id": true,
       "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER11",
+      "expected_model_number": "PlaceholderModel11",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 11",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER12",
+      "expected_model_number": "PlaceholderModel12",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 12",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER13",
+      "expected_model_number": "PlaceholderModel13",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 13",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER14",
+      "expected_model_number": "PlaceholderModel14",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 14",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER15",
+      "expected_model_number": "PlaceholderModel15",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 15",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER16",
+      "expected_model_number": "PlaceholderModel16",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 16",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER17",
+      "expected_model_number": "PlaceholderModel17",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 17",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER18",
+      "expected_model_number": "PlaceholderModel18",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 18",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER19",
+      "expected_model_number": "PlaceholderModel19",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 19",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "PLACEHOLDER20",
+      "expected_model_number": "PlaceholderModel20",
+      "brand": "PlaceholderBrand",
+      "marketing_title_hint": "Placeholder Laptop 20",
+      "tracking_enabled": false,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": true,
+      "placeholder_note": "PLACEHOLDER part number. Not a real manufacturer part number. Excluded from price checks until a verified part number is confirmed from a manufacturer or retailer product page."
+    },
+    {
+      "manufacturer_part_number": "ACER-SWIFT-14-SF314-43",
+      "expected_model_number": "Swift 3 SF314-43",
+      "brand": "Acer",
+      "marketing_title_hint": "Acer Swift 3 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "HP-SPECTRE-X360-14",
+      "expected_model_number": "Spectre x360 14",
+      "brand": "HP",
+      "marketing_title_hint": "HP Spectre x360 14 inch 2-in-1 Laptop i5 16GB 512GB SSD - Silver",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "DELL-XPS-15-9520",
+      "expected_model_number": "XPS15-9520",
+      "brand": "Dell",
+      "marketing_title_hint": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "LENOVO-THINKPAD-X1-CARBON",
+      "expected_model_number": "ThinkPad X1 Carbon Gen 9",
+      "brand": "Lenovo",
+      "marketing_title_hint": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "MACBOOK-PRO-14-M1",
+      "expected_model_number": "MacBook Pro 14",
+      "brand": "Apple",
+      "marketing_title_hint": "Apple MacBook Pro 14 14in M1 Pro 16GB 512GB SSD Laptop - Space Gray",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "MSI-GP-LX-X13",
+      "expected_model_number": "GP-LX-X13",
+      "brand": "MSI",
+      "marketing_title_hint": "MSI GeForce Now GP66 Legion 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "RAZER-BLADE-15-ADVANCED",
+      "expected_model_number": "Blade 15 Advanced",
+      "brand": "Razer",
+      "marketing_title_hint": "Razer Blade 15 Advanced 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "SURFACE-PRO-8-i5-128",
+      "expected_model_number": "Surface Pro 8",
+      "brand": "Microsoft",
+      "marketing_title_hint": "Microsoft Surface Pro 8 13in i5 8GB 256GB SSD Tablet - Platinum",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "ALIENWARE-M15-R6",
+      "expected_model_number": "M15 R6",
+      "brand": "Dell",
+      "marketing_title_hint": "Dell Alienware M15 R6 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "AOC-U2490VX",
+      "expected_model_number": "U2490VX",
+      "brand": "AOC",
+      "marketing_title_hint": "AOC U2490VX 24.9in 4K Ultra HD IPS Monitor with USB-C",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "ASUS-ROG-STRIX-SCARYGAME",
+      "expected_model_number": "Scar III Gaming",
+      "brand": "ASUS",
+      "marketing_title_hint": "ASUS ROG Strix Scar III 17.3in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "LG-34WN-OLKEN",
+      "expected_model_number": "34WN-OLKEN",
+      "brand": "LG",
+      "marketing_title_hint": "LG 34WN-OLKEN 34in 21:9 Ultra Wide IPS Monitor - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "SAMSUNG-GAMING-ODYSSEY",
+      "expected_model_number": "Odyssey G5",
+      "brand": "Samsung",
+      "marketing_title_hint": "Samsung Odyssey G5 27in 165Hz QHD Gaming Monitor - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "CYBERPOWERPC- Gamer-Xtreme",
+      "expected_model_number": "Gamer Xtreme",
+      "brand": "CyberPowerPC",
+      "marketing_title_hint": "CyberPowerPC Gamer Xtreme 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
+    },
+    {
+      "manufacturer_part_number": "HP-OMEN-15-EH1057NR",
+      "expected_model_number": "OMEN 15-EH1057NR",
+      "brand": "HP",
+      "marketing_title_hint": "HP OMEN 15-EH1057NR 15.6in i7 16GB 1TB SSD Gaming Laptop - Omen Black",
+      "tracking_enabled": true,
+      "added_at": "2026-10-09T00:00:00Z",
+      "placeholder_id": false,
+      "placeholder_note": null
     }
   ],
   "global_settings": {
