@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-09T00:00:00Z",
+  "_updated_at": "2026-10-22T11:16:45.295165",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -88,26 +88,11 @@
           "checked_at": "2026-10-03T00:00:00Z"
         },
         "argos": {
-          "retailer": "Argos",
-          "retailer_slug": "argos",
-          "retailer_product_id": "7741159",
-          "listing_title": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
-          "product_url": "https://www.argos.co.uk/product/7741159",
-          "price": null,
-          "currency": "GBP",
-          "list_price": null,
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "BLOCKED",
-          "verification_method": "blocked",
-          "verification_source": "https://r.jina.ai/https://www.argos.co.uk/product/7741159",
-          "evidence": "Jina Reader returned HTTP 200 with body 'Title: Access Denied / Warning: Target URL returned error 403: Forbidden / You don't have permission to access http://www.argos.co.uk/product/7741159 on this server'. Reference #18.a8c83017.1790982640.7bab177d. Direct curl with desktop Chrome UA also returned HTTP 403.",
-          "block_reason": "HTTP 403 at Akamai edge (errors.edgesuite.net). Confirmed via direct fetch and Jina Reader. Not an Argos outage - consistent across attempts and via two independent paths.",
-          "checked_at": "2026-10-03T00:00:00Z",
-          "last_known_price_unverified": 549.0,
-          "last_known_price_at": "2026-10-02T14:58:36Z",
-          "last_known_price_note": "Retained for continuity only. NOT a current verified price. See data/price-history.json observation history_argos_7741159. Argos' own pages disagree on this price (549.00 product page, 499.00 category page, 629.99 laptops listing), so this figure is low-confidence even if access is restored."
+          "price": 499.0,
+          "availability": "in_stock",
+          "url": "https://www.argos.co.uk/product/7741159",
+          "checked_at": "2026-10-20T08:13:01.617299+00:00",
+          "validation_status": "VERIFIED"
         },
         "ao": {
           "retailer": "AO",
@@ -173,18 +158,16 @@
           "excluded_from_lowest_verified_reason": "verification_status is UNVERIFIED and price is null",
           "block_reason": null,
           "checked_at": "2026-10-03T00:45:00Z"
+        },
+        "boxcouk": {
+          "price": 619.99,
+          "availability": "Out of Stock",
+          "url": "https://box.co.uk/90nb15f1-m00a60-asus-vivobook-16-m1607ka-copilot",
+          "verification_status": "VERIFIED",
+          "checked_at": "2026-10-22T11:16:45.295165"
         }
       },
-      "lowest_verified": {
-        "price": 549.99,
-        "currency": "GBP",
-        "retailer_slug": "asus-uk-store",
-        "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
-        "retailers_checked": 6,
-        "retailers_verified": 3,
-        "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-03T00:45:00Z"
-      },
+      "lowest_verified": 499.0,
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-02T14:58:36Z",
@@ -230,26 +213,11 @@
           "checked_at": "2026-10-03T00:00:00Z"
         },
         "argos": {
-          "retailer": "Argos",
-          "retailer_slug": "argos",
-          "retailer_product_id": "7761225",
-          "listing_title": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
-          "product_url": "https://www.argos.co.uk/product/7761225",
-          "price": null,
-          "currency": "GBP",
-          "list_price": null,
-          "price_type": "standard",
-          "availability": "unknown",
-          "last_verified": null,
-          "verification_status": "BLOCKED",
-          "verification_method": "blocked",
-          "verification_source": "https://r.jina.ai/https://www.argos.co.uk/product/7761225",
-          "evidence": "Jina Reader returned HTTP 200 with body 'Title: Access Denied / Warning: Target URL returned error 403: Forbidden'. Reference #18.abc84d17.1790982643.44da1b7. Direct curl returned HTTP 403.",
-          "block_reason": "HTTP 403 at Akamai edge (errors.edgesuite.net).",
-          "checked_at": "2026-10-03T00:00:00Z",
-          "last_known_price_unverified": 549.0,
-          "last_known_price_at": "2026-10-02T14:58:36Z",
-          "last_known_price_note": "Retained for continuity only. NOT a current verified price, and NOT re-verifiable while blocked."
+          "price": 499.0,
+          "availability": "in_stock",
+          "url": "https://www.argos.co.uk/product/7956449",
+          "checked_at": "2026-10-20T08:13:01.617299+00:00",
+          "validation_status": "VERIFIED"
         },
         "amazon": {
           "retailer": "Amazon UK",
@@ -291,17 +259,18 @@
           "excluded_from_lowest_verified_reason": "availability is preorder, not in_stock",
           "block_reason": null,
           "checked_at": "2026-10-03T00:45:00Z"
+        },
+        "asus_uk_store": {
+          "price": 549.99,
+          "availability": "In Stock",
+          "url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+          "verification_status": "VERIFIED",
+          "checked_at": "2026-10-22T11:16:45.295165"
         }
       },
       "lowest_verified": {
-        "price": 499.99,
-        "currency": "GBP",
-        "retailer_slug": "asus-uk-store",
-        "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
-        "retailers_checked": 4,
-        "retailers_verified": 2,
-        "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-03T00:45:00Z"
+        "price": 549.99,
+        "checked_at": "2026-10-22T11:16:45.295165"
       },
       "tracking": {
         "enabled": true,
@@ -414,17 +383,18 @@
           "evidence": "Body read at source. Manufacturer part number (MPN) 3XGG3 in spec block. Price \u00a3749.00. Add to basket present. 2-year guarantee. Specs: Intel Core 5 120U, 16GB LPDDR5X, 512GB PCIe Gen4 NVMe, 16\" 2K 16:10 IPS, Intel Graphics, Windows 11 Home.",
           "block_reason": null,
           "checked_at": "2026-10-03T00:45:00Z"
+        },
+        "john_lewis": {
+          "price": 999.0,
+          "availability": "In Stock",
+          "url": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
+          "verification_status": "VERIFIED",
+          "checked_at": "2026-10-22T11:16:45.295165"
         }
       },
       "lowest_verified": {
-        "price": 749.0,
-        "currency": "GBP",
-        "retailer_slug": "johnlewis",
-        "product_url": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
-        "retailers_checked": 1,
-        "retailers_verified": 1,
-        "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-03T00:45:00Z"
+        "price": 999.0,
+        "checked_at": "2026-10-22T11:16:45.295165"
       },
       "tracking": {
         "enabled": true,

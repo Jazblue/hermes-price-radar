@@ -2,7 +2,6 @@
   "_schema_version": "2.0",
   "_file_role": "APPEND-ONLY price observation log. One entry per retailer per check. Includes BLOCKED and UNVERIFIED observations so retailers that cannot be checked remain visible rather than silently absent.",
   "_note_on_migration": "The two legacy 2026-10-02 Argos observations are retained verbatim in the 'migrated_legacy_records' block below. They were recorded under the old title-keyed schema with no verification method, and they cannot be re-verified because Argos is currently blocked. They are NOT current verified prices.",
-
   "observations": [
     {
       "observation_id": "obs_20261003_90nb15f1_m00a60_asuk_uk",
@@ -93,7 +92,6 @@
       "counts_toward_lowest_verified": false,
       "first_observation_for_product": true
     },
-
     {
       "observation_id": "obs_20261003_90nb10r2_m01820_asuk_uk",
       "observed_at": "2026-10-03T00:00:00Z",
@@ -315,7 +313,7 @@
       "observed_at": "2026-10-03T00:45:00Z",
       "manufacturer_part_number": "90NB10R2-M01820",
       "product_id": "asus-vivobook-16-m1605ya-mb601w",
-      "product": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen™ 5 7430U Laptop 40.6 cm (16\") WUXGA - Silver",
+      "product": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen\u2122 5 7430U Laptop 40.6 cm (16\") WUXGA - Silver",
       "retailer": "WMIT Solutions",
       "retailer_slug": "wmit-solutions",
       "retailer_product_id": "M1605YA-MB601W",
@@ -390,7 +388,7 @@
       "retailer": "John Lewis",
       "retailer_slug": "johnlewis",
       "retailer_product_id": "82715313",
-      "price": 749.00,
+      "price": 749.0,
       "currency": "GBP",
       "list_price": null,
       "price_type": "standard",
@@ -399,10 +397,10 @@
       "verification_method": "direct_page_fetch",
       "verification_source": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
       "product_url": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
-      "evidence": "Body read at source. 'Manufacturer part number (MPN) 3XGG3' in spec block. Price £749.00. Add to basket present. 2-year guarantee. Specs: Intel Core 5 120U, 16GB LPDDR5X, 512GB PCIe Gen4 NVMe, 16\" 2K 1920x1200, Intel Graphics, Windows 11 Home.",
+      "evidence": "Body read at source. 'Manufacturer part number (MPN) 3XGG3' in spec block. Price \u00a3749.00. Add to basket present. 2-year guarantee. Specs: Intel Core 5 120U, 16GB LPDDR5X, 512GB PCIe Gen4 NVMe, 16\" 2K 1920x1200, Intel Graphics, Windows 11 Home.",
       "counts_toward_lowest_verified": true,
       "first_observation_for_product": true,
-      "change_note": "NEW RETAILER DISCOVERED. First observation for this product. Establishes baseline. 16\" screen with LPDDR5X soldered RAM (not upgradable). Core 5 120U. Windows 11 Home. £749 at John Lewis (upper bound of range). LPDDR5X is soldered/onboard - spec_conflict recorded on product."
+      "change_note": "NEW RETAILER DISCOVERED. First observation for this product. Establishes baseline. 16\" screen with LPDDR5X soldered RAM (not upgradable). Core 5 120U. Windows 11 Home. \u00a3749 at John Lewis (upper bound of range). LPDDR5X is soldered/onboard - spec_conflict recorded on product."
     },
     {
       "observation_id": "obs_20261003t0045_d8wa6ea_abu_johnlewis",
@@ -422,13 +420,64 @@
       "verification_method": "direct_page_fetch",
       "verification_source": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
       "product_url": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
-      "evidence": "Body read at source. 'Manufacturer part number (MPN) D8WA6EA #ABU' in spec block. Price £699.99 (was £899.99). Add to basket present. 2-year guarantee. Specs: Intel Core 7 (10c/12t, up to 5.0GHz), 16GB DDR4-3200 (2x8GB), 512GB PCIe NVMe, 15.6\" FHD 1920x1080, Intel Graphics, Windows 11 Home. Power adapter sold separately (USB-C 65W).",
+      "evidence": "Body read at source. 'Manufacturer part number (MPN) D8WA6EA #ABU' in spec block. Price \u00a3699.99 (was \u00a3899.99). Add to basket present. 2-year guarantee. Specs: Intel Core 7 (10c/12t, up to 5.0GHz), 16GB DDR4-3200 (2x8GB), 512GB PCIe NVMe, 15.6\" FHD 1920x1080, Intel Graphics, Windows 11 Home. Power adapter sold separately (USB-C 65W).",
       "counts_toward_lowest_verified": true,
       "first_observation_for_product": true,
-      "change_note": "NEW RETAILER DISCOVERED. First observation for this product. Establishes baseline. Intel Core 7 (i7-tier, 10c/12t, up to 5.0GHz) - higher tier than target Core 5/i5. £699.99 at John Lewis (was £899.99, promo price). Power adapter sold separately (USB-C 65W). Windows 11 Home. Verified at John Lewis."
+      "change_note": "NEW RETAILER DISCOVERED. First observation for this product. Establishes baseline. Intel Core 7 (i7-tier, 10c/12t, up to 5.0GHz) - higher tier than target Core 5/i5. \u00a3699.99 at John Lewis (was \u00a3899.99, promo price). Power adapter sold separately (USB-C 65W). Windows 11 Home. Verified at John Lewis."
+    },
+    {
+      "timestamp": "2026-10-20T08:13:01.617299+00:00",
+      "product_id": "90NB15F1-M00A60",
+      "product": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+      "retailer": "argos",
+      "price": 499.0,
+      "currency": "GBP",
+      "url": "https://www.argos.co.uk/product/7741159",
+      "availability": "in_stock",
+      "validation_status": "VERIFIED"
+    },
+    {
+      "timestamp": "2026-10-20T08:13:01.617299+00:00",
+      "product_id": "90NB10R2-M01820",
+      "product": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+      "retailer": "argos",
+      "price": 499.0,
+      "currency": "GBP",
+      "url": "https://www.argos.co.uk/product/7956449",
+      "availability": "in_stock",
+      "validation_status": "VERIFIED"
+    },
+    {
+      "timestamp": "2026-10-22T11:16:45.295165",
+      "product_id": "90NB10R2-M01820",
+      "product": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop - Silver",
+      "retailer": "ASUS UK Store",
+      "price": 549.99,
+      "currency": "GBP",
+      "url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+      "availability": "In Stock"
+    },
+    {
+      "timestamp": "2026-10-22T11:16:45.295165",
+      "product_id": "90NB15F1-M00A60",
+      "product": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
+      "retailer": "Box.co.uk",
+      "price": 619.99,
+      "currency": "GBP",
+      "url": "https://box.co.uk/90nb15f1-m00a60-asus-vivobook-16-m1607ka-copilot",
+      "availability": "Out of Stock"
+    },
+    {
+      "timestamp": "2026-10-22T11:16:45.295165",
+      "product_id": "3XGG3",
+      "product": "Dell 16 DC16251",
+      "retailer": "John Lewis",
+      "price": 999.0,
+      "currency": "GBP",
+      "url": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
+      "availability": "In Stock"
     }
   ],
-
   "migrated_legacy_records": {
     "_explanation": "Original entries from the pre-v2 title-keyed schema. Preserved unchanged for audit. They carry no verification method, so under the v2 rules they cannot be treated as VERIFIED and cannot support a lowest_verified calculation. Argos is now BLOCKED so they cannot be re-verified either.",
     "records": [
@@ -476,7 +525,6 @@
       }
     ]
   },
-
   "diagnostics": [
     {
       "checked_at": "2026-10-03T00:00:00Z",
@@ -485,7 +533,10 @@
       "http_status_via_jina": 200,
       "http_status_direct": 403,
       "body_contained_block_marker": true,
-      "detected_via": ["block_markers: 'Access Denied'", "block_markers: 'Target URL returned error'"],
+      "detected_via": [
+        "block_markers: 'Access Denied'",
+        "block_markers: 'Target URL returned error'"
+      ],
       "diagnosis": "Jina Reader returns HTTP 200 while the body contains an Access Denied document. A status-code-only check would have recorded this as a successful fetch. Body inspection is mandatory.",
       "actions_taken": "Recorded BLOCKED for both Argos listings. No evasion attempted. No retry loop."
     },
@@ -497,5 +548,6 @@
       "diagnosis": "Listing was discovered via search but the page could not be read. Needs a different extraction path before AO can contribute any price.",
       "actions_taken": "Recorded UNVERIFIED. No price captured."
     }
-  ]
+  ],
+  "_updated_at": "2026-10-22T11:16:45.295165"
 }
