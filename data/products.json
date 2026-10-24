@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-22T11:16:45.295165",
+  "_updated_at": "2026-10-24T19:09:15.726469+01:00",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -877,5 +877,6 @@
       "placeholder_note": null
     }
   },
-  "unresolved": []
+  "unresolved": [],
+  "_last_research": "2026-10-24T19:26:00+01:00"
 }
