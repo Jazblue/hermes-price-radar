@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-26T10:14:28.019822+00:00",
+  "_updated_at": "2026-10-28T13:36:28.386804+00:00",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -99,19 +99,19 @@
           "retailer_slug": "ao",
           "retailer_product_id": "M1607KA-MB148W",
           "listing_title": "ASUS Vivobook 16 M1607KA-MB148W 16 Copilot+ Laptop - Blue",
-          "product_url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop--blue-107583-251.aspx",
+          "product_url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop-blue-107583-251.aspx",
           "price": 470.0,
           "currency": "GBP",
           "list_price": 749.0,
           "price_type": "standard",
           "availability": "in_stock",
-          "last_verified": "2026-10-26T10:14:28.019822+00:00",
+          "last_verified": "2026-10-28T13:36:28.386804+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop--blue-107583-251.aspx",
           "evidence": "AO product page shows \u00a3470 (was \u00a3749), Save \u00a3279. Model M1607KA-MB148W confirmed. Add to basket present. In stock with delivery from Tue 27th Oct.",
           "block_reason": null,
-          "checked_at": "2026-10-26T10:14:28.019822+00:00"
+          "checked_at": "2026-10-28T13:36:28.386804+00:00"
         },
         "box": {
           "retailer": "Box (box.co.uk)",
@@ -191,7 +191,13 @@
           "detected_at": "2026-10-26T10:14:28.019822+00:00",
           "reason": "AO now offering \u00a3470 (was \u00a3749), new lowest verified price"
         }
-      ]
+      ],
+      "lowest_recorded_price": 470.0,
+      "highest_recorded_price": 549.99,
+      "previous_price": 499.0,
+      "current_price": 470.0,
+      "price_change": -29.0,
+      "last_checked": "2026-10-28T13:36:28.386804+00:00"
     },
     "90NB10R2-M01820": {
       "product_id": "asus-vivobook-16-m1605ya-mb601w",
@@ -223,20 +229,23 @@
           "list_price": 549.99,
           "price_type": "standard",
           "availability": "in_stock",
-          "last_verified": "2026-10-26T10:14:28.019822+00:00",
+          "last_verified": "2026-10-28T13:36:06.417060+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
           "evidence": "ASUS UK store page shows Special Price GBP 499.99 / Regular Price GBP 549.99 / Save GBP 50. Model M1605YA-MB601W, Part Number 90NB10R2-M01820 confirmed.",
           "block_reason": null,
-          "checked_at": "2026-10-03T00:00:00Z"
+          "checked_at": "2026-10-28T13:36:06.417060+00:00"
         },
         "argos": {
-          "price": 499.0,
+          "price": 499.99,
           "availability": "in_stock",
           "url": "https://www.argos.co.uk/product/7956449",
-          "checked_at": "2026-10-20T08:13:01.617299+00:00",
-          "validation_status": "VERIFIED"
+          "checked_at": "2026-10-28T13:36:06.417060+00:00",
+          "validation_status": "VERIFIED",
+          "last_verified": "2026-10-28T13:36:06.417060+00:00",
+          "verification_status": "VERIFIED",
+          "product_url": "https://www.argos.co.uk/product/7761225"
         },
         "amazon": {
           "retailer": "Amazon UK",
@@ -285,6 +294,20 @@
           "url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
           "verification_status": "VERIFIED",
           "checked_at": "2026-10-22T11:16:45.295165"
+        },
+        "very": {
+          "retailer": "Very",
+          "retailer_slug": "very",
+          "retailer_product_id": "1601194992",
+          "listing_title": "ASUS Vivobook 16 laptop 16in FHD AMD Ryzen 5 16GB RAM 512GB SSD Silver",
+          "product_url": "https://www.very.co.uk/asus-vivobook-16-laptop-16in-fhd-amd-ryzen-5nbsp16gb-ram-512gb-ssd-silver/1601194992.prd",
+          "price": 549.0,
+          "currency": "GBP",
+          "availability": "in_stock",
+          "last_verified": "2026-10-28T13:36:06.417060+00:00",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "checked_at": "2026-10-28T13:36:06.417060+00:00"
         }
       },
       "lowest_verified": {
@@ -311,7 +334,13 @@
           "detected_at": "2026-10-26T10:14:28.019822+00:00",
           "reason": "ASUS UK Store dropped price from \u00a3549.99 to \u00a3499.99 (Save \u00a350)"
         }
-      ]
+      ],
+      "lowest_recorded_price": 499.99,
+      "highest_recorded_price": 549.0,
+      "previous_price": 499.0,
+      "current_price": 499.99,
+      "price_change": 0.9900000000000091,
+      "last_checked": "2026-10-28T13:36:06.417060+00:00"
     },
     "6CH4H": {
       "product_id": "dell-inspiron-15-3530-6ch4h",
@@ -470,7 +499,13 @@
           "detected_at": "2026-10-26T10:14:28.019822+00:00",
           "reason": "Dell UK dropped price from \u00a3999 to \u00a3729 (new config launched)"
         }
-      ]
+      ],
+      "lowest_recorded_price": 991.2,
+      "highest_recorded_price": 999.0,
+      "previous_price": 729.0,
+      "current_price": 991.2,
+      "price_change": 262.20000000000005,
+      "last_checked": "2026-10-28T13:36:28.386804+00:00"
     },
     "D8WA6EA#ABU": {
       "product_id": "hp-15-fd1000nax-d8wa6ea-abu",
@@ -534,7 +569,13 @@
           "detected_at": "2026-10-26T10:14:28.019822+00:00",
           "reason": "John Lewis increased price from \u00a3699.99 to \u00a3849.99"
         }
-      ]
+      ],
+      "lowest_recorded_price": 699.0,
+      "highest_recorded_price": 849.99,
+      "previous_price": 849.99,
+      "current_price": 699.0,
+      "price_change": -150.99,
+      "last_checked": "2026-10-28T13:36:28.386804+00:00"
     },
     "90NB0XXX-M00ABC": {
       "product_id": "temp-90NB0XXX-M00ABC",

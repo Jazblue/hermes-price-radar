@@ -661,6 +661,23 @@
       "change_from_previous": 150.0,
       "change_percentage": 21.4,
       "first_observation_for_product": false
+    },
+    {
+      "observation_id": "obs_20261028_90nb10r2_argos",
+      "observed_at": "2026-10-28T13:36:06.417060+00:00",
+      "manufacturer_part_number": "90NB10R2-M01820",
+      "product_id": "asus-vivobook-m1605ya-mb601w",
+      "product": "ASUS Vivobook M160 16in R5 16GB 512GB Laptop",
+      "retailer": "Argos",
+      "retailer_slug": "argos",
+      "retailer_product_id": "7761225",
+      "price": 499.99,
+      "currency": "GBP",
+      "availability": "in_stock",
+      "verification_status": "VERIFIED",
+      "verification_method": "direct_page_fetch",
+      "product_url": "https://www.argos.co.uk/product/7761225",
+      "evidence": "Argos product page: price \u00a3499.99, in stock. MPN 90NB10R2-M01820, model M1605YA-MB601W confirmed."
     }
   ],
   "migrated_legacy_records": {
