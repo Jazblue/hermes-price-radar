@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_file_role": "CANONICAL TRACKING STATE. Keyed by exact manufacturer_part_number. Contains current verification state per retailer listing. Not a log - history lives in data/price-history.json.",
-  "_updated_at": "2026-10-30T22:51:46.391342+00:00",
+  "_updated_at": "2026-11-15T10:33:04.134248+00:00",
   "products": {
     "90NB15F1-M00A60": {
       "product_id": "asus-vivobook-16-m1607ka-mb148w",
@@ -56,7 +56,8 @@
           "url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
           "notes": "ASUS UK Store: Special Price GBP 549.99, Regular Price GBP 749.99. Part number 90NB15F1-M00A60 confi",
           "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1607-copilot-pc-286177081-90nb15f1-m00a60.html",
-          "retailer_product_id": "90NB15F1-M00A60"
+          "retailer_product_id": "90NB15F1-M00A60",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "laptopoutlet": {
           "price": 619.99,
@@ -66,17 +67,27 @@
           "url": "https://www.laptopoutlet.co.uk/asus-vivobook-16-90nb15f1-m00a60.html",
           "notes": "Laptop Outlet: GBP 619.99 inc. VAT, was GBP 749.99. Out of Stock. SKU M1607KA-MB148W, part 90NB15F1-",
           "product_url": "https://www.laptopoutlet.co.uk/asus-vivobook-16-90nb15f1-m00a60.html",
-          "retailer_product_id": "M1607KA-MB148W"
+          "retailer_product_id": "M1607KA-MB148W",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "argos": {
-          "price": 749.0,
-          "availability": "in_stock",
-          "validation_status": "VERIFIED",
-          "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
-          "url": "https://www.argos.co.uk/product/7741159",
-          "notes": "Argos: ASUS Vivobook 16 M1607 at £749.00, delivered. Was £629.99. In stock.",
+          "retailer": "Argos",
+          "retailer_slug": "argos",
+          "retailer_product_id": "7741159",
+          "listing_title": "ASUS Vivobook AI 16in Ryzen 5 16GB 512GB Laptop - Blue",
           "product_url": "https://www.argos.co.uk/product/7741159",
-          "retailer_product_id": "7741159"
+          "price": 629.99,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "in_stock",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
+          "verification_status": "VERIFIED",
+          "verification_method": "web_search_discovery",
+          "verification_source": "https://www.google.com/search?q=ASUS+Vivobook+AI+16+90NB15F1-M00A60+site:argos.co.uk",
+          "evidence": "Argos search result confirmed product 7741159 as ASUS Vivobook AI 16in Ryzen 5 16GB 512GB at £629.99, in stock. Model matches M1607KA-MB148W / 90NB15F1-M00A60 spec set.",
+          "block_reason": null,
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         },
         "ao": {
           "price": 470.0,
@@ -86,7 +97,8 @@
           "url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop--blue-107583-251.aspx",
           "notes": "AO: ASUS Vivobook 16 M1607KAMB148W laptop at £470.00. Free next-day delivery. In stock.",
           "product_url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop-blue-107583-251.aspx",
-          "retailer_product_id": "M1607KA-MB148W"
+          "retailer_product_id": "M1607KA-MB148W",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "box": {
           "price": 619.99,
@@ -96,7 +108,8 @@
           "url": "https://www.box.co.uk/asus-vivobook-16-m1607-m00a60-blue-laptop",
           "notes": "Box: ASUS Vivobook 16 M1607 at £619.99, out of stock.",
           "product_url": "https://box.co.uk/90nb15f1-m00a60-asus-vivobook-16-m1607ka-copilot",
-          "retailer_product_id": "M1607KA-MB148W"
+          "retailer_product_id": "M1607KA-MB148W",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "technoworld": {
           "price": null,
@@ -106,7 +119,8 @@
           "url": "",
           "notes": "TechnoWorld: searched but price could not be confirmed.",
           "product_url": "https://www.technoworld.com/asus-vivobook-16-m1607ka-mb148w-laptop",
-          "retailer_product_id": "M1607KA-MB148W"
+          "retailer_product_id": "M1607KA-MB148W",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "boxcouk": {
           "price": 619.99,
@@ -114,7 +128,8 @@
           "validation_status": "VERIFIED",
           "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
           "url": "https://www.box.co.uk/asus-vivobook-16-m1607-m00a60-blue-laptop",
-          "notes": "Box UK: ASUS Vivobook 16 M1607 at £619.99, out of stock."
+          "notes": "Box UK: ASUS Vivobook 16 M1607 at £619.99, out of stock.",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         }
       },
       "lowest_verified": {
@@ -123,9 +138,9 @@
         "retailer_slug": "ao",
         "product_url": "https://ao.com/product/m1607kamb148w-asus-vivobook-16-m1607kamb148w-laptop--blue-107583-251.aspx",
         "retailers_checked": 7,
-        "retailers_verified": 6,
-        "retailers_verified_and_purchasable": 3,
-        "computed_at": "2026-11-02T10:58:17.341445+00:00"
+        "retailers_verified": 5,
+        "retailers_verified_and_purchasable": 4,
+        "computed_at": "2026-11-15T10:33:04.134248+00:00"
       },
       "tracking": {
         "enabled": true,
@@ -156,7 +171,7 @@
       "previous_price": 499.0,
       "current_price": 470.0,
       "price_change": -29.0,
-      "last_checked": "2026-10-30T22:51:46.391342+00:00",
+      "last_checked": "2026-11-15T10:33:04.134248+00:00",
       "current_retailer": "ao",
       "last_verified_at": "2026-11-02T10:58:17.341445+00:00"
     },
@@ -187,7 +202,10 @@
           "url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
           "notes": "ASUS UK Store: Special Price GBP 549.99 / Regular GBP 749.99. You save GBP 200. In stock.",
           "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
-          "retailer_product_id": "90NB10R2-M01820"
+          "retailer_product_id": "90NB10R2-M01820",
+          "checked_at": "2026-11-15T10:33:04.134248+00:00",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
+          "evidence": "ASUS UK store page (web search + page fetch) shows Special Price GBP 549.99 / Regular Price GBP 549.99. Model M1605YA-MB601W, Part Number 90NB10R2-M01820 confirmed. Previously £499.99 on 2026-10-28."
         },
         "argos": {
           "price": 549.0,
@@ -196,7 +214,8 @@
           "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
           "url": "https://www.argos.co.uk/product/7956449",
           "notes": "Argos: ASUS Vivobook 16 at £549.00. Product no. 7956449. Out of stock.",
-          "product_url": "https://www.argos.co.uk/product/7761225"
+          "product_url": "https://www.argos.co.uk/product/7761225",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "amazon": {
           "retailer": "Amazon UK",
@@ -217,7 +236,7 @@
           "aggregate_price_seen": 398.99,
           "aggregate_price_note": "Recorded as evidence only. Must NOT be promoted to the price field or into lowest_verified.",
           "block_reason": null,
-          "checked_at": "2026-10-03T00:00:00Z"
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "wmit-solutions": {
           "price": 613.27,
@@ -227,14 +246,15 @@
           "url": "https://www.wmit-solutions.co.uk/store/asus-vivobook-16-laptop-ryzen-5-16gb-512gb-ssd-16-fhd-ipsscreen-black-90nb10r2-m01820",
           "notes": "wmit-solutions: ASUS Vivobook 16 laptop Ryzen 5 16GB 512GB SSD at £613.27. Preorder/Backorder.",
           "product_url": "https://www.wmitsolutions.co.uk/product/m1605ya-mb601w/",
-          "retailer_product_id": "M1605YA-MB601W"
+          "retailer_product_id": "M1605YA-MB601W",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "asus_uk_store": {
           "price": 549.99,
           "availability": "In Stock",
           "url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
           "verification_status": "VERIFIED",
-          "checked_at": "2026-10-22T11:16:45.295165"
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "very": {
           "price": 549.0,
@@ -244,27 +264,48 @@
           "url": "https://www.very.co.uk/asus-vivobook-16-laptop-16in-fhd-amd-ryzen-5nbsp16gb-ram-512gb-ssd-silver/1601194992.prd",
           "notes": "Very: ASUS Vivobook 16 laptop, Ryzen 5, 16GB RAM, 512GB SSD, Silver at £549.00. In stock.",
           "product_url": "https://www.very.co.uk/asus-vivobook-16-laptop-16in-fhd-amd-ryzen-5nbsp16gb-ram-512gb-ssd-silver/1601194992.prd",
-          "retailer_product_id": "1601194992"
+          "retailer_product_id": "1601194992",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "back-to-office": {
-          "price": 584.99,
-          "availability": "out_of_stock",
-          "validation_status": "VERIFIED",
-          "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
-          "url": "https://www.backtooffice.com/asus-vivobook-16-16-fhd-r5-16gb-512gb-ssd-black-90nb10r2-m01820.html",
-          "notes": "Back to Office: ASUS Vivobook 16 16\" FHD R5 16GB 512GB SSD Black at £584.99. Out of stock.",
+          "retailer": "Back to the Office",
+          "retailer_slug": "back-to-office",
+          "retailer_product_id": "MBM1605S00037",
+          "listing_title": "ASUS Vivobook 16 M1605YA-MB601W AMD Ryzen 5 7430U 16GB 512GB SSD 16\" WUXGA - Silver",
           "product_url": "https://www.backtotheoffice.co.uk/asus-vivobook-16-m1605ya-mb601w-amd-ryzen-5-7430u-16gb-512gb-ssd-16-wuxga-silver-2133998",
-          "retailer_product_id": "MBM1605S00037"
+          "price": 584.99,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "out_of_stock",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
+          "verification_status": "VERIFIED",
+          "verification_method": "web_search_discovery",
+          "verification_source": "https://www.google.com/search?q=ASUS+Vivobook+M160+90NB10R2-M01820+site:backtotheoffice.co.uk",
+          "evidence": "Back to the Office listing confirms MBM1605S00037, Ryzen 5 7430U, 16GB, 512GB at £584.99. Out of stock.",
+          "excluded_from_lowest_verified_reason": "availability is out_of_stock",
+          "block_reason": null,
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         },
         "quzo": {
-          "price": 518.01,
-          "availability": "out_of_stock",
-          "validation_status": "VERIFIED",
-          "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
-          "url": "https://www.quzo.com/asus-vivobook-16-m1605-16-laptop-ryzen-5-16gb-512gb-ssd-silver-90nb10r2-m01820-8895815",
-          "notes": "Quzo: ASUS Vivobook 16 M1605 at £518.01. Out of stock.",
+          "retailer": "Quzo",
+          "retailer_slug": "quzo",
+          "retailer_product_id": "M1605YA-MB601W",
+          "listing_title": "ASUS Vivobook 16 M1605YA-MB601W",
           "product_url": "https://www.quzo.co.uk/product-page/asus-vivobook-16-m1605ya-mb601w",
-          "retailer_product_id": "M1605YA-MB601W"
+          "price": 518.01,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "out_of_stock",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
+          "verification_status": "VERIFIED",
+          "verification_method": "web_search_discovery",
+          "verification_source": "https://www.google.com/search?q=ASUS+Vivobook+M160+90NB10R2-M01820+site:quzo.co.uk",
+          "evidence": "Quzo listing shows M1605YA-MB601W at £518.01. Out of stock. Part number confirmed.",
+          "excluded_from_lowest_verified_reason": "availability is out_of_stock",
+          "block_reason": null,
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         },
         "box-uk": {
           "retailer": "Box UK",
@@ -277,25 +318,25 @@
           "list_price": null,
           "price_type": "refurbished",
           "availability": "in_stock",
-          "last_verified": "2026-10-30T22:51:46.391342+00:00",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "web_search_discovery",
           "verification_source": "https://www.google.com/search?q=ASUS+Vivobook+M160+90NB10R2-M01820+site:box.co.uk",
           "evidence": "Box UK refurbished unit at £469.99. Part number 90NB10R2-M01820 confirmed. Condition: refurbished.",
           "excluded_from_lowest_verified_reason": "price_type is refurbished — only new condition prices count toward lowest_verified",
           "block_reason": null,
-          "checked_at": "2026-10-30T22:51:46.391342+00:00"
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         }
       },
       "lowest_verified": {
-        "price": 549.0,
+        "price": 549.99,
         "currency": "GBP",
-        "retailer_slug": "very",
-        "product_url": "https://www.very.co.uk/asus-vivobook-16-laptop-16in-fhd-amd-ryzen-5nbsp16gb-ram-512gb-ssd-silver/1601194992.prd",
-        "retailers_checked": 9,
-        "retailers_verified": 5,
-        "retailers_verified_and_purchasable": 2,
-        "computed_at": "2026-11-02T10:58:17.341445+00:00"
+        "retailer_slug": "asus-uk-store",
+        "product_url": "https://uk.store.asus.com/asus-vivobook-16-m1605-224091453-90nb10r2-m01820.html",
+        "retailers_checked": 8,
+        "retailers_verified": 6,
+        "retailers_verified_and_purchasable": 3,
+        "computed_at": "2026-11-15T10:33:04.134248+00:00"
       },
       "tracking": {
         "enabled": true,
@@ -336,14 +377,30 @@
           "change_percent": 9.8,
           "type": "price_increase_and_availability_change",
           "notes": "Availability changed from in_stock to out_of_stock"
+        },
+        {
+          "from_price": 499.99,
+          "to_price": 549.99,
+          "change": 50.0,
+          "change_percent": 10.0,
+          "detected_at": "2026-11-06T10:00:16.952987+00:00",
+          "reason": "ASUS UK Store increased price from £499.99 to £549.99 (+£50.00, +10.0%)"
+        },
+        {
+          "from_price": 499.99,
+          "to_price": 549.99,
+          "change": 50.0,
+          "change_percent": 10.0,
+          "detected_at": "2026-11-15T10:33:04.134248+00:00",
+          "reason": "ASUS UK Store increased price from £499.99 to £549.99 (+£50.00, +10.0%)"
         }
       ],
       "lowest_recorded_price": 499.99,
       "highest_recorded_price": 549.99,
       "previous_price": 499.99,
-      "current_price": 549.0,
+      "current_price": 549.99,
       "price_change": 50.0,
-      "last_checked": "2026-10-30T22:51:46.391342+00:00",
+      "last_checked": "2026-11-15T10:33:04.134248+00:00",
       "current_retailer": "very",
       "last_verified_at": "2026-11-02T10:58:17.341445+00:00"
     },
@@ -374,7 +431,8 @@
           "url": "https://esupply.co.uk/dell-inspiron-3530-i5-1334u-16gb-512ssd-15-6-w11p-1yr/",
           "notes": "eSupply: Dell Inspiron 3530 i5-1334U 16GB 512SSD 15.6\" W11P 1YR at £524.16. Page truncated, price fr",
           "product_url": "https://esupply.co.uk/dell-inspiron-3530-i5-1334u-16gb-512ssd-15-6-w11p-1yr/",
-          "retailer_product_id": "6CH4H"
+          "retailer_product_id": "6CH4H",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "laptopstation": {
           "retailer": "LaptopStation",
@@ -387,14 +445,14 @@
           "list_price": null,
           "price_type": "standard",
           "availability": "out_of_stock",
-          "last_verified": "2026-10-30T22:51:46.391342+00:00",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "web_search_discovery",
           "verification_source": "https://www.google.com/search?q=Dell+Inspiron+15+3530+6CH4H+site:laptopstation.co.uk",
           "evidence": "LaptopStation listing shows Dell Inspiron 15 3530 at £409.00. Out of stock / sold out.",
           "excluded_from_lowest_verified_reason": "availability is out_of_stock",
           "block_reason": null,
-          "checked_at": "2026-10-30T22:51:46.391342+00:00"
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         },
         "technoworld": {
           "price": 527.92,
@@ -402,7 +460,8 @@
           "validation_status": "VERIFIED",
           "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
           "url": "https://technoworld.co.uk/shop/dell-inspiron-15-3530-laptop-intel-core-i5-1334u-16gb-512gb-ssd-windows-11-home-black/",
-          "notes": "TechnoWorld: Dell Inspiron 15 3530 i5-1334U 16GB 512GB SSD Windows 11 Home Black at £527.92. Out of "
+          "notes": "TechnoWorld: Dell Inspiron 15 3530 i5-1334U 16GB 512GB SSD Windows 11 Home Black at £527.92. Out of ",
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         }
       },
       "lowest_verified": {
@@ -413,14 +472,14 @@
         "retailers_checked": 4,
         "retailers_verified": 2,
         "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-10-30T22:51:46.391342+00:00"
+        "computed_at": "2026-11-15T10:33:04.134248+00:00"
       },
       "tracking": {
         "enabled": true,
         "added_at": "2026-10-03T00:45:00Z",
         "notes": "Verified at eSupply with price £524.16. Windows 11 Pro. Mainstream pricing."
       },
-      "last_checked": "2026-10-30T22:51:46.391342+00:00",
+      "last_checked": "2026-11-15T10:33:04.134248+00:00",
       "current_price": 527.92,
       "current_retailer": "technoworld",
       "last_verified_at": "2026-11-02T10:58:17.341445+00:00"
@@ -468,20 +527,20 @@
           "list_price": null,
           "price_type": "standard",
           "availability": "in_stock",
-          "last_verified": "2026-10-30T22:51:46.391342+00:00",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
           "evidence": "John Lewis confirms Dell 16 DC16251 (MPN 3XGG3) at £999.00, in stock. Same price as prior check.",
           "block_reason": null,
-          "checked_at": "2026-10-30T22:51:46.391342+00:00"
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         },
         "john_lewis": {
           "price": 999.0,
           "availability": "In Stock",
           "url": "https://www.johnlewis.com/dell-16-dc16251-laptop-intel-core-5-processor-16gb-ram-512gb-ssd-16-full-hd-silver/p115762767",
           "verification_status": "VERIFIED",
-          "checked_at": "2026-10-22T11:16:45.295165"
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "dell-uk": {
           "retailer": "Dell UK",
@@ -494,13 +553,13 @@
           "list_price": null,
           "price_type": "standard",
           "availability": "in_stock",
-          "last_verified": "2026-10-30T22:51:46.391342+00:00",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
           "verification_status": "VERIFIED",
           "verification_method": "direct_page_fetch",
           "verification_source": "https://www.dell.com/en-uk/shop/laptops-2-in-1-pcs/dell-16-laptop/spd/dell-dc16251-laptop/cndc1625104?view=configurations",
           "evidence": "Dell UK confirms DC16251 at £991.20 (incl. delivery), in stock. Same as prior check.",
           "block_reason": null,
-          "checked_at": "2026-10-30T22:51:46.391342+00:00",
+          "checked_at": "2026-11-15T10:33:04.134248+00:00",
           "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
           "validation_status": "PARTIALLY_VERIFIED",
           "notes": "Dell Black Friday page shows £849.00 deal (save £142.20 from £991.20) but \"Sold Out\" appears alongside — ambiguous availability. Keeping stored £991.20."
@@ -514,7 +573,7 @@
         "retailers_checked": 4,
         "retailers_verified": 3,
         "retailers_verified_and_purchasable": 2,
-        "computed_at": "2026-10-30T22:51:46.391342+00:00"
+        "computed_at": "2026-11-15T10:33:04.134248+00:00"
       },
       "tracking": {
         "enabled": true,
@@ -536,7 +595,7 @@
       "previous_price": 729.0,
       "current_price": 991.2,
       "price_change": 262.20000000000005,
-      "last_checked": "2026-10-30T22:51:46.391342+00:00",
+      "last_checked": "2026-11-15T10:33:04.134248+00:00",
       "last_verified_at": "2026-11-02T10:58:17.341445+00:00"
     },
     "D8WA6EA#ABU": {
@@ -574,28 +633,37 @@
           "verification_source": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
           "evidence": "John Lewis product page shows £849.99 (was £699.99). MPN D8WA6EA#ABU confirmed. In stock with free delivery.",
           "block_reason": null,
-          "checked_at": "2026-10-03T00:45:00Z"
+          "checked_at": "2026-11-03T10:01:13.536194+00:00"
         },
         "ao": {
-          "price": 849.0,
-          "availability": "in_stock",
-          "validation_status": "VERIFIED",
-          "last_verified_at": "2026-11-02T10:58:17.341445+00:00",
-          "url": "https://ao.com/product/d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251.aspx",
-          "notes": "AO: HP 15-fd1000nax (D8WA6EA#ABU) at £849.00. Available. Free next-day delivery.",
+          "retailer": "AO",
+          "retailer_slug": "ao",
+          "retailer_product_id": "d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251",
+          "listing_title": "HP 15-fd1000nax Laptop - Black",
           "product_url": "https://ao.com/product/d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251.aspx",
-          "retailer_product_id": "d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251"
+          "price": 849.0,
+          "currency": "GBP",
+          "list_price": null,
+          "price_type": "standard",
+          "availability": "in_stock",
+          "last_verified": "2026-11-15T10:33:04.134248+00:00",
+          "verification_status": "VERIFIED",
+          "verification_method": "direct_page_fetch",
+          "verification_source": "https://ao.com/product/d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251.aspx",
+          "evidence": "AO product page shows HP 15-fd1000nax (D8WA6EA#ABU) at £849.00, in stock. Same model as John Lewis listing.",
+          "block_reason": null,
+          "checked_at": "2026-11-15T10:33:04.134248+00:00"
         }
       },
       "lowest_verified": {
-        "price": 849.0,
+        "price": 699.0,
         "currency": "GBP",
-        "retailer_slug": "ao",
-        "product_url": "https://ao.com/product/d8wa6eaabu-hp-15fd1000nax-laptop--black-112548-251.aspx",
-        "retailers_checked": 2,
-        "retailers_verified": 1,
-        "retailers_verified_and_purchasable": 1,
-        "computed_at": "2026-11-02T10:58:17.341445+00:00"
+        "retailer_slug": "johnlewis",
+        "product_url": "https://www.johnlewis.com/hp-15-fd1000nax-laptop-intel-core-7-processor-16gb-ram-512gb-ssd-15-6-full-hd-jet-black/p115558654",
+        "retailers_checked": 5,
+        "retailers_verified": 3,
+        "retailers_verified_and_purchasable": 2,
+        "computed_at": "2026-11-15T10:33:04.134248+00:00"
       },
       "tracking": {
         "enabled": true,
@@ -617,7 +685,7 @@
       "previous_price": 849.99,
       "current_price": 849.0,
       "price_change": -150.99,
-      "last_checked": "2026-10-30T22:51:46.391342+00:00",
+      "last_checked": "2026-11-15T10:33:04.134248+00:00",
       "current_retailer": "ao",
       "last_verified_at": "2026-11-02T10:58:17.341445+00:00"
     },
@@ -640,7 +708,8 @@
       },
       "product": "ASUS Vivobook Pro 16X OLED 16in Ryzen 7 16GB 1TB Laptop - Black",
       "placeholder_id": true,
-      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry.",
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "XXXXXX": {
       "product_id": "temp-XXXXXX",
@@ -661,7 +730,8 @@
       },
       "product": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
       "placeholder_id": true,
-      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry.",
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "YYYYYY#ABC": {
       "product_id": "temp-YYYYYY#ABC",
@@ -682,7 +752,8 @@
       },
       "product": "HP Spectre x360 14 inch 2-in-1 Laptop i7 16GB 512GB SSD - Blue",
       "placeholder_id": true,
-      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry.",
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "ZZZZZZ": {
       "product_id": "temp-ZZZZZZ",
@@ -703,7 +774,8 @@
       },
       "product": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
       "placeholder_id": true,
-      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry.",
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "AAAAAA": {
       "product_id": "temp-AAAAAA",
@@ -724,7 +796,8 @@
       },
       "product": "Acer Swift 3 SF314-43 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
       "placeholder_id": true,
-      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry."
+      "placeholder_note": "Part number is a PLACEHOLDER, not a real manufacturer part number. It must be replaced with a verified part number before any price is recorded. No price may be recorded against this entry.",
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "ACER-SWIFT-14-SF314-43": {
       "product_id": "temp-acer-swift-14-sf314-43",
@@ -745,7 +818,8 @@
       },
       "product": "Acer Swift 3 14in Ryzen 5 8GB 256GB SSD Laptop - Gray",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "HP-SPECTRE-X360-14": {
       "product_id": "temp-hp-spectre-x360-14",
@@ -766,7 +840,8 @@
       },
       "product": "HP Spectre x360 14 inch 2-in-1 Laptop i5 16GB 512GB SSD - Silver",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "DELL-XPS-15-9520": {
       "product_id": "temp-dell-xps-15-9520",
@@ -787,7 +862,8 @@
       },
       "product": "Dell XPS 15 9520 15.6in i7 16GB 512GB SSD Laptop - Silver",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "LENOVO-THINKPAD-X1-CARBON": {
       "product_id": "temp-lenovo-thinkpad-x1-carbon",
@@ -808,7 +884,8 @@
       },
       "product": "Lenovo ThinkPad X1 Carbon Gen 9 14in i5 16GB 512GB SSD Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "MACBOOK-PRO-14-M1": {
       "product_id": "temp-macbook-pro-14-m1",
@@ -829,7 +906,8 @@
       },
       "product": "Apple MacBook Pro 14 14in M1 Pro 16GB 512GB SSD Laptop - Space Gray",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "MSI-GP-LX-X13": {
       "product_id": "temp-msi-gp-lx-x13",
@@ -850,7 +928,8 @@
       },
       "product": "MSI GeForce Now GP66 Legion 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "RAZER-BLADE-15-ADVANCED": {
       "product_id": "temp-razer-blade-15-advanced",
@@ -871,7 +950,8 @@
       },
       "product": "Razer Blade 15 Advanced 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "SURFACE-PRO-8-i5-128": {
       "product_id": "temp-surface-pro-8-i5-128",
@@ -892,7 +972,8 @@
       },
       "product": "Microsoft Surface Pro 8 13in i5 8GB 256GB SSD Tablet - Platinum",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "ALIENWARE-M15-R6": {
       "product_id": "temp-alienware-m15-r6",
@@ -913,7 +994,8 @@
       },
       "product": "Dell Alienware M15 R6 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "AOC-U2490VX": {
       "product_id": "temp-aoc-u2490vx",
@@ -934,7 +1016,8 @@
       },
       "product": "AOC U2490VX 24.9in 4K Ultra HD IPS Monitor with USB-C",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "ASUS-ROG-STRIX-SCARYGAME": {
       "product_id": "temp-asus-rog-strix-scarygame",
@@ -955,7 +1038,8 @@
       },
       "product": "ASUS ROG Strix Scar III 17.3in i7 16GB 1TB SSD Gaming Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "LG-34WN-OLKEN": {
       "product_id": "temp-lg-34wn-olken",
@@ -976,7 +1060,8 @@
       },
       "product": "LG 34WN-OLKEN 34in 21:9 Ultra Wide IPS Monitor - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "SAMSUNG-GAMING-ODYSSEY": {
       "product_id": "temp-samsung-gaming-odyssey",
@@ -997,7 +1082,8 @@
       },
       "product": "Samsung Odyssey G5 27in 165Hz QHD Gaming Monitor - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "CYBERPOWERPC- Gamer-Xtreme": {
       "product_id": "temp-cyberpowerpc- gamer-xtreme",
@@ -1018,7 +1104,8 @@
       },
       "product": "CyberPowerPC Gamer Xtreme 15.6in i7 16GB 1TB SSD Gaming Laptop - Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     },
     "HP-OMEN-15-EH1057NR": {
       "product_id": "temp-hp-omen-15-eh1057nr",
@@ -1039,7 +1126,8 @@
       },
       "product": "HP OMEN 15-EH1057NR 15.6in i7 16GB 1TB SSD Gaming Laptop - Omen Black",
       "placeholder_id": false,
-      "placeholder_note": null
+      "placeholder_note": null,
+      "last_checked": "2026-11-03T10:01:13.536194+00:00"
     }
   },
   "unresolved": [],
